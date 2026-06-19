@@ -1283,9 +1283,9 @@
   trySwap('hero-char.png', im=>{ const a=document.querySelector('.hero-art .hero-char'); if(!a) return;
     im.className='hero-char'; im.alt='Nhân vật GOLDMUVN'; a.replaceWith(im); });
   // Banner ngang làm nền hero (ảnh 2 nhân vật) — ưu tiên nếu có
-  trySwap('hero-banner.png', im=>{ const hb=document.getElementById('heroBanner'); if(!hb) return;
-    hb.style.backgroundImage="url('hero-banner.png')";
-    document.querySelector('.hero').classList.add('banner-mode','png-banner'); });
+  trySwap('hero-banner.jpg', im=>{ const hb=document.getElementById('heroBanner'); if(!hb) return;
+    hb.style.backgroundImage="url('hero-banner.jpg')";
+    document.querySelector('.hero').classList.add('banner-mode'); });
   // 7 nhân vật (char-1.png … char-7.png)
   document.querySelectorAll('.clsrow .cls-art').forEach((art,i)=>{
     trySwap('char-'+(i+1)+'.png', im=>{ art.innerHTML='';
