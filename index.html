@@ -145,6 +145,12 @@
   .hero.banner-mode .hero-grid{grid-template-columns:1fr;position:relative;z-index:1}
   .hero.banner-mode .hero-copy{max-width:620px}
   .hero.banner-mode .hero-art{display:none}
+  /* PNG trong suốt: ảnh trôi tự nhiên, chỉ làm mờ rất nhẹ mép dưới */
+  .hero.png-banner .hero-banner{top:4%;bottom:2%;right:1%;left:48%;
+    background-size:contain;background-position:center bottom}
+  .hero.png-banner .hero-banner::after{
+    background:linear-gradient(0deg,rgba(6,6,10,.5) 0%,transparent 12%)}
+  @media(max-width:880px){.hero.png-banner .hero-banner{left:0;background-size:contain;background-position:center;opacity:.9!important}}
   @media(max-width:880px){
     .hero-banner{left:0;background-size:cover;background-position:center;opacity:.28!important}
     .hero-banner::after{background:linear-gradient(180deg,rgba(6,6,10,.72),rgba(6,6,10,.9)),linear-gradient(0deg,#06060a 2%,transparent 45%)}
@@ -1277,9 +1283,9 @@
   trySwap('hero-char.png', im=>{ const a=document.querySelector('.hero-art .hero-char'); if(!a) return;
     im.className='hero-char'; im.alt='Nhân vật GOLDMUVN'; a.replaceWith(im); });
   // Banner ngang làm nền hero (ảnh 2 nhân vật) — ưu tiên nếu có
-  trySwap('hero-banner.jpg', im=>{ const hb=document.getElementById('heroBanner'); if(!hb) return;
-    hb.style.backgroundImage="url('hero-banner.jpg')";
-    document.querySelector('.hero').classList.add('banner-mode'); });
+  trySwap('hero-banner.png', im=>{ const hb=document.getElementById('heroBanner'); if(!hb) return;
+    hb.style.backgroundImage="url('hero-banner.png')";
+    document.querySelector('.hero').classList.add('banner-mode','png-banner'); });
   // 7 nhân vật (char-1.png … char-7.png)
   document.querySelectorAll('.clsrow .cls-art').forEach((art,i)=>{
     trySwap('char-'+(i+1)+'.png', im=>{ art.innerHTML='';
