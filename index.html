@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOLDMUVN — MU Online Season 6.21 | Máy Chủ Phục Hưng</title>
+<meta name="description" content="GOLDMUVN — MU Online Season 6.21 máy chủ Phục Hưng. Cày cuốc công bằng, không pay-to-win, antihack đỉnh cao, sự kiện liên tục. Tải game, tham gia ngay!">
+<meta name="keywords" content="GOLDMUVN, MU Online, MU Season 6.21, MU Phục Hưng, MU private, mu ss6, game MU, đua top MU, tải MU">
+<meta name="author" content="GOLDMUVN">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a12">
+<link rel="canonical" href="https://bigbeargtv.github.io/goldmuvn/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GOLDMUVN">
+<meta property="og:title" content="GOLDMUVN — MU Online Season 6.21 | Máy Chủ Phục Hưng">
+<meta property="og:description" content="Máy chủ Phục Hưng khai mở! Cày cuốc công bằng, không pay-to-win, antihack đỉnh cao, sự kiện liên tục. Tải game & vào chiến ngay.">
+<meta property="og:url" content="https://bigbeargtv.github.io/goldmuvn/">
+<meta property="og:image" content="https://bigbeargtv.github.io/goldmuvn/images/og-cover.jpg">
+<meta property="og:locale" content="vi_VN">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GOLDMUVN — MU Online Season 6.21 | Máy Chủ Phục Hưng">
+<meta name="twitter:description" content="Máy chủ Phục Hưng khai mở! Cày cuốc công bằng, không pay-to-win, sự kiện liên tục.">
+<meta name="twitter:image" content="https://bigbeargtv.github.io/goldmuvn/images/og-cover.jpg">
+<!-- Favicon (sigil) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='5' fill='%23f4c95d'/><path d='M12 3 13.2 6 12 8.5 10.8 6z M12 8.5V16 M9 16h6' stroke='%231a1206' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06060a;
+    --bg2:#0b0d16;
+    --gold:#f4c95d;
+    --gold-2:#caa14b;
+    --ember:#ff6a2b;
+    --ember-2:#ff3d2e;
+    --text:#e9e6df;
+    --muted:#b6afc2;
+    --line:rgba(244,201,93,.18);
+    --card:rgba(20,18,30,.72);
+    --font:"Be Vietnam Pro","Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font);
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+    line-height:1.6;
+  }
+  h1,h2,h3,.cinzel{font-family:var(--font);font-weight:800;text-transform:uppercase;letter-spacing:.2px;line-height:1.22}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .gold{color:var(--gold)}
+  .glow-text{text-shadow:0 0 18px rgba(255,106,43,.55),0 0 40px rgba(244,201,93,.25)}
+  /* custom icons */
+  .i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:middle}
+  .btn .i{width:20px;height:20px}
+  /* notched forged-metal panel */
+  .panel{--notch:14px;
+    clip-path:polygon(var(--notch) 0,100% 0,100% calc(100% - var(--notch)),calc(100% - var(--notch)) 100%,0 100%,0 var(--notch));
+    position:relative}
+
+  /* ===== Animated background ===== */
+  /* Ảnh nền: thả 1 file ảnh fantasy vào thư mục "images/" và đặt tên "background.jpg".
+     Nếu chưa có ảnh, nền gradient tối vẫn hiển thị bình thường. */
+  .bg-photo{position:fixed;inset:0;z-index:-3;
+    background:url('images/background.jpg') center/cover no-repeat fixed;
+    filter:saturate(.95) contrast(1.05)}
+  .bg-fx{position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(1200px 700px at 50% -10%,rgba(255,61,46,.20),transparent 60%),
+      radial-gradient(900px 600px at 85% 20%,rgba(244,201,93,.10),transparent 55%),
+      radial-gradient(900px 700px at 10% 80%,rgba(120,40,255,.10),transparent 55%),
+      linear-gradient(180deg,rgba(6,6,10,.82),rgba(10,10,18,.90) 40%,rgba(6,6,10,.95));
+  }
+  .embers{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+  .ember{position:absolute;bottom:-20px;width:4px;height:4px;border-radius:50%;
+    background:radial-gradient(circle,#ffd27a,#ff5a2b);
+    box-shadow:0 0 8px #ff6a2b;animation:rise linear infinite;opacity:0}
+  @keyframes rise{
+    0%{transform:translateY(0) translateX(0) scale(1);opacity:0}
+    10%{opacity:.9}
+    90%{opacity:.7}
+    100%{transform:translateY(-110vh) translateX(40px) scale(.3);opacity:0}
+  }
+
+  /* ===== Nav ===== */
+  header.nav{position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(10px);
+    background:linear-gradient(180deg,rgba(6,6,10,.92),rgba(6,6,10,.55));
+    border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:var(--font);font-weight:800;font-size:20px}
+  .brand .mark{width:38px;height:38px;border-radius:9px;
+    background:linear-gradient(145deg,var(--ember),var(--gold));
+    display:grid;place-items:center;color:#1a1206;font-weight:800;
+    box-shadow:0 0 18px rgba(255,106,43,.6)}
+  .nav-links{display:flex;gap:30px;font-size:14px;font-weight:500}
+  .nav-links a{color:var(--muted);transition:.25s;position:relative}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;
+    background:linear-gradient(135deg,var(--ember),var(--ember-2));
+    box-shadow:0 6px 20px rgba(255,61,46,.35);transition:.25s;color:#fff}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,61,46,.5)}
+  .burger{display:none;font-size:26px;color:var(--gold);background:none;border:none;cursor:pointer}
+
+  /* ===== Hero ===== */
+  .hero{position:relative;padding:48px 0 44px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+  .hero-copy{text-align:left}
+  .hero-art{position:relative;display:grid;place-items:center;min-height:480px}
+  .hero-char{width:100%;max-width:460px;filter:drop-shadow(0 24px 50px rgba(255,61,46,.35));
+    animation:floatY 5s ease-in-out infinite}
+  @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  .hero-art::after{content:"";position:absolute;bottom:6%;width:60%;height:34px;border-radius:50%;
+    background:radial-gradient(ellipse,rgba(0,0,0,.6),transparent 70%);filter:blur(6px)}
+  .hero-ring{position:absolute;width:430px;height:430px;border-radius:50%;
+    border:1px solid var(--line);box-shadow:inset 0 0 80px rgba(255,106,43,.18);
+    animation:spin 28s linear infinite}
+  .hero-ring.r2{width:330px;height:330px;border-style:dashed;animation-duration:40s;animation-direction:reverse;border-color:rgba(244,201,93,.2)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;text-align:center}
+    .hero-copy{text-align:center}
+    .hero-art{min-height:360px;order:-1}
+    .hero-char{max-width:320px}
+    .hero-ring{width:320px;height:320px}.hero-ring.r2{width:240px;height:240px}
+  }
+  .hero-old{position:relative;text-align:center}
+  .badge{display:inline-flex;align-items:center;gap:9px;padding:8px 18px;border-radius:999px;
+    border:1px solid var(--line);background:rgba(244,201,93,.06);
+    font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:26px}
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px var(--ember);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .hero h1{font-size:clamp(40px,7.5vw,84px);font-weight:800;line-height:1.18;margin-bottom:8px}
+  .hero h1 .l2{background:linear-gradient(180deg,#fff,var(--gold) 60%,var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{max-width:560px;margin:18px 0 0;color:var(--muted);font-size:clamp(15px,2.2vw,19px)}
+  .tags{display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap;margin:30px 0 36px}
+  .tag{padding:9px 18px;border-radius:10px;border:1px solid var(--line);
+    background:var(--card);font-weight:600;font-size:14px}
+  .tag b{color:var(--gold)}
+  .hero-cta{display:flex;gap:16px;justify-content:flex-start;flex-wrap:wrap}
+  @media(max-width:880px){
+    .hero .sub{margin:18px auto 0}
+    .tags,.hero-cta{justify-content:center}
+  }
+  .btn{padding:16px 34px;border-radius:11px;font-weight:700;font-size:16px;cursor:pointer;
+    transition:.25s;display:inline-flex;align-items:center;gap:10px;border:none}
+  .btn-primary{background:linear-gradient(135deg,var(--ember),var(--ember-2));color:#fff;
+    box-shadow:0 10px 30px rgba(255,61,46,.4)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(255,61,46,.55)}
+  .btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+  .btn-discord{background:#5865F2;color:#fff;box-shadow:0 10px 30px rgba(88,101,242,.35)}
+  .btn-discord:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(88,101,242,.5)}
+
+  /* ===== Countdown ===== */
+  .countdown{margin:40px auto 0;max-width:680px}
+  .cd-label{text-align:center;color:var(--muted);text-transform:uppercase;letter-spacing:3px;font-size:12px;margin-bottom:14px}
+  .cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .cd-box{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 6px;text-align:center;position:relative;overflow:hidden}
+  .cd-box::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(255,106,43,.10),transparent 70%)}
+  .cd-num{font-family:var(--font);font-size:clamp(30px,5vw,46px);font-weight:700;color:var(--gold);position:relative;line-height:1}
+  .cd-unit{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px;position:relative}
+
+  /* ===== Sections ===== */
+  section{padding:54px 0;position:relative}
+  .sec-head{text-align:center;margin-bottom:34px}
+  .sec-head .kick{color:var(--ember);letter-spacing:3px;text-transform:uppercase;font-size:13px;font-weight:700}
+  .sec-head h2{font-size:clamp(30px,5vw,46px);margin-top:10px;display:inline-block;position:relative}
+  .sec-head h2::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-16px;
+    width:120px;height:14px;
+    background:
+      linear-gradient(90deg,transparent,var(--gold-2) 30%,var(--gold-2) 70%,transparent) center/100% 1px no-repeat;
+  }
+  .sec-head h2::before{content:"";position:absolute;left:50%;bottom:-22px;width:10px;height:10px;
+    transform:translateX(-50%) rotate(45deg);background:var(--gold);
+    box-shadow:0 0 12px rgba(244,201,93,.7);z-index:1}
+  .sec-head p{color:var(--muted);max-width:560px;margin:30px auto 0;font-size:15px}
+
+  /* server info cards */
+  .grid{display:grid;gap:16px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .stat{background:var(--card);border:1px solid var(--line);padding:18px 14px;text-align:center;transition:.3s;
+    clip-path:polygon(13px 0,100% 0,100% calc(100% - 13px),calc(100% - 13px) 100%,0 100%,0 13px)}
+  .stat:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 16px 32px rgba(0,0,0,.5)}
+  .stat .ic{margin-bottom:8px;color:var(--gold)}
+  .stat .ic .i{width:28px;height:28px;filter:drop-shadow(0 0 10px rgba(244,201,93,.35))}
+  .stat .v{font-family:var(--font);font-size:28px;font-weight:700;color:var(--gold);line-height:1}
+  .stat .k{color:var(--muted);font-size:13px;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+
+  .features{grid-template-columns:repeat(3,1fr);margin-top:16px}
+  .feat{background:var(--card);border:1px solid var(--line);padding:20px;transition:.3s;
+    display:grid;grid-template-columns:44px 1fr;column-gap:14px;row-gap:3px;align-items:start;
+    clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)}
+  .feat:hover{transform:translateY(-5px);border-color:var(--ember)}
+  .feat .ic{grid-row:1 / span 2;width:44px;height:44px;display:grid;place-items:center;color:var(--gold);
+    background:linear-gradient(145deg,rgba(255,106,43,.18),rgba(244,201,93,.08));
+    clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);
+    border:1px solid var(--line)}
+  .feat .ic .i{width:23px;height:23px}
+  .feat h3{font-size:16px;margin-bottom:4px;letter-spacing:.3px}
+  .feat p{color:var(--muted);font-size:13.5px;line-height:1.5}
+
+  /* classes */
+  .classes{grid-template-columns:repeat(3,1fr);margin-top:16px}
+  .cls{position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    background:linear-gradient(180deg,rgba(20,18,30,.4),rgba(10,9,16,.9));transition:.3s;cursor:pointer}
+  .cls:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 26px 50px rgba(0,0,0,.55)}
+  .cls-art{position:relative;height:160px;display:grid;place-items:center;
+    background:radial-gradient(200px 150px at 50% 30%,var(--cglow,rgba(255,106,43,.22)),transparent 70%)}
+  .cls-art svg{height:135px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5));transition:.4s}
+  .cls:hover .cls-art svg{transform:scale(1.06)}
+  .cls-body{padding:14px 16px 16px;text-align:center;border-top:1px solid var(--line)}
+  .cls-body h3{font-size:17px}
+  .cls-body .role{display:inline-block;margin-top:4px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;
+    color:var(--gold);font-weight:700}
+  .cls-body p{color:var(--muted);font-size:13px;margin-top:7px;line-height:1.45}
+  .cls-bars{display:flex;gap:5px;justify-content:center;margin-top:11px}
+  /* compact single-row character strip */
+  .clsrow{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;margin-top:6px;justify-content:flex-start;scrollbar-width:thin}
+  .clsrow .cls{flex:0 0 auto;width:120px}
+  .clsrow .cls-art{height:104px;background:radial-gradient(140px 110px at 50% 35%,var(--cglow,rgba(255,106,43,.22)),transparent 70%)}
+  .clsrow .cls-art svg{height:86px}
+  .clsrow .cls-body{padding:8px 6px 10px}
+  .clsrow .cls-body h3{font-size:13px}
+  .clsrow .cls-body .role,.clsrow .cls-body p,.clsrow .cls-bars{display:none}
+  @media(min-width:980px){.clsrow{justify-content:center}}
+  @media(max-width:560px){.clsrow .cls{width:108px}.clsrow .cls-art svg{height:78px}}
+
+  /* ===== Guide overlays (single-file) ===== */
+  .overlay{position:fixed;inset:0;z-index:200;background:#070710;overflow-y:auto;display:none}
+  .overlay.open{display:block}
+  body.locked{overflow:hidden}
+  .ov-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+  .ov-bar{position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(6,6,10,.96),rgba(6,6,10,.72));backdrop-filter:blur(10px);margin-bottom:10px}
+  .ovbar-row{display:flex;align-items:center;gap:14px;height:60px}
+  .ovbar-row .obrand{font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:16px}
+  .ov-back,.ov-close{cursor:pointer;background:none;font-family:var(--font)}
+  .ov-back{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:600;font-size:14px;border:none}
+  .ov-close{margin-left:auto;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px}
+  .ov-close:hover{color:var(--gold);border-color:var(--gold)}
+  .gd-head{padding:24px 0 4px}
+  .gd-head h2{font-size:clamp(26px,5vw,40px);text-transform:uppercase}
+  .gd-head p{color:var(--muted);margin-top:8px;max-width:600px}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 24px}
+  .chip{padding:7px 15px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;transition:.2s}
+  .chip:hover{color:var(--text);border-color:var(--gold-2)}
+  .chip.on{color:#1a1206;background:linear-gradient(135deg,#ffe18a,#caa14b);border-color:transparent}
+  .news{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:50px}
+  .art{border:1px solid var(--line);background:var(--card);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:.3s;
+    clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+  .art:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 22px 44px rgba(0,0,0,.5)}
+  .art-thumb{position:relative;height:140px;display:grid;place-items:center;overflow:hidden}
+  .art-thumb .glyph{font-size:54px;font-weight:800;color:rgba(255,255,255,.10)}
+  .art-tag{position:absolute;top:12px;left:12px;font-size:11px;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:6px;background:rgba(6,6,10,.65);border:1px solid var(--line);color:var(--gold)}
+  .c-new .art-thumb{background:linear-gradient(135deg,#1b2a44,#0c1322)}
+  .c-setup .art-thumb{background:linear-gradient(135deg,#14323a,#0a1a1f)}
+  .c-feat .art-thumb{background:linear-gradient(135deg,#3a2c5e,#1a132e)}
+  .c-event .art-thumb{background:linear-gradient(135deg,#4a1f22,#21100f)}
+  .c-pay .art-thumb{background:linear-gradient(135deg,#3a3320,#1c1810)}
+  .art-body{padding:15px 18px 18px;display:flex;flex-direction:column;flex:1}
+  .art-body h4{font-size:15px;line-height:1.35;color:var(--text)}
+  .art-body p{color:var(--muted);font-size:13px;margin-top:7px;flex:1}
+  .art-meta{display:flex;justify-content:space-between;margin-top:12px;font-size:12px;color:var(--muted)}
+  .art-more{color:var(--gold);font-weight:700}
+  /* article reading */
+  .read{max-width:800px;margin:0 auto;padding:8px 0 60px}
+  .read .a-tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.5px;padding:4px 12px;border-radius:6px;color:#1a1206;background:linear-gradient(135deg,#ffe18a,#caa14b);margin-bottom:12px}
+  .read h1{font-size:clamp(24px,4.5vw,36px);line-height:1.22}
+  .a-meta{display:flex;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:13px;margin:14px 0 20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .a-meta b{color:var(--text);font-weight:600}
+  .a-hero{height:240px;border-radius:14px;margin-bottom:22px;display:grid;place-items:center;text-align:center;color:var(--muted);background:linear-gradient(135deg,#1b2a44,#0c1322);border:1px solid var(--line);font-size:13px;padding:18px}
+  .a-hero .ph{font-size:40px;font-weight:800;color:rgba(255,255,255,.12)}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:24px}
+  .toc h4{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .toc ol{list-style:none;counter-reset:t;margin:0;padding:0}
+  .toc li{counter-increment:t;margin:6px 0}
+  .toc li a{color:var(--muted);font-size:14px}
+  .toc li a::before{content:counter(t) ". ";color:var(--gold-2);font-weight:700}
+  .toc li a:hover{color:var(--gold)}
+  .rd h2{font-size:21px;margin:30px 0 10px}
+  .rd h2 .num{color:var(--gold)}
+  .rd p{margin:12px 0;color:#d9d4e0}
+  .rd ul{margin:12px 0 12px 4px;padding-left:22px;color:#d9d4e0}
+  .rd li{margin:6px 0}
+  .rd strong{color:#fff}
+  .steps{list-style:none;counter-reset:s;padding:0;margin:16px 0}
+  .steps>li{counter-increment:s;position:relative;padding:13px 16px 13px 56px;margin:10px 0;background:var(--card);border:1px solid var(--line);border-radius:12px}
+  .steps>li::before{content:counter(s);position:absolute;left:13px;top:12px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#1a1206;background:linear-gradient(135deg,#ffe18a,#caa14b)}
+  .steps>li b{color:#fff}
+  .callout{display:flex;gap:14px;padding:15px 18px;border-radius:12px;margin:18px 0;border:1px solid var(--line);background:var(--card)}
+  .callout .bar{width:4px;border-radius:4px;flex:0 0 auto}
+  .callout.note .bar{background:var(--gold)}
+  .callout.warn .bar{background:var(--ember)}
+  .callout h4{font-size:14px;margin-bottom:3px;color:var(--text)}
+  .callout p{margin:0;font-size:14px;color:var(--muted)}
+  .tb{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px}
+  .tb th{text-align:left;padding:10px 14px;background:rgba(244,201,93,.08);color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--line)}
+  .tb td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted);vertical-align:top}
+  .tb td:first-child{color:var(--text);font-weight:600}
+  .faq{border:1px solid var(--line);border-radius:12px;background:var(--card);margin:8px 0;overflow:hidden}
+  .faq summary{padding:13px 18px;cursor:pointer;font-weight:600;color:var(--text);list-style:none;position:relative}
+  .faq summary::after{content:"+";position:absolute;right:18px;color:var(--gold);font-size:20px}
+  .faq[open] summary::after{content:"−"}
+  .faq .ans{padding:0 18px 15px;color:var(--muted);font-size:14px}
+  @media(max-width:880px){.news{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.news{grid-template-columns:1fr}}
+
+  /* back to top */
+  .totop{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:12px;z-index:120;
+    display:none;place-items:center;cursor:pointer;border:none;color:#fff;
+    background:linear-gradient(135deg,var(--ember),var(--ember-2));box-shadow:0 8px 22px rgba(255,61,46,.4);transition:.25s}
+  .totop:hover{transform:translateY(-3px)}
+  .totop.show{display:grid}
+  .cls-bars i{width:26px;height:6px;border-radius:3px;background:rgba(255,255,255,.12)}
+  .cls-bars i.on{background:linear-gradient(90deg,var(--ember),var(--gold))}
+
+  /* gallery placeholders for user's own screenshots */
+  .gallery{grid-template-columns:repeat(3,1fr);margin-top:24px}
+  .shot{aspect-ratio:16/10;border-radius:16px;border:1px dashed var(--line);
+    background:repeating-linear-gradient(45deg,rgba(255,255,255,.02),rgba(255,255,255,.02) 12px,transparent 12px,transparent 24px),var(--card);
+    display:grid;place-items:center;text-align:center;color:var(--muted);font-size:13.5px;padding:18px;transition:.3s}
+  .shot:hover{border-color:var(--gold);color:var(--gold)}
+  .shot .i{width:36px;height:36px;margin-bottom:10px;opacity:.55;stroke-width:1.4}
+  .shot img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+
+  /* events */
+  .events{grid-template-columns:repeat(3,1fr)}
+  .event{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:20px 20px;overflow:hidden;transition:.3s}
+  .event:hover{transform:translateY(-5px);border-color:var(--gold)}
+  .event .ribbon{position:absolute;top:14px;right:-36px;transform:rotate(45deg);
+    background:linear-gradient(135deg,var(--ember),var(--ember-2));color:#fff;
+    font-size:10px;font-weight:700;padding:4px 40px;letter-spacing:1px}
+  .event .ic{margin-bottom:10px;color:var(--ember)}
+  .event .ic .i{width:32px;height:32px;stroke-width:1.4;filter:drop-shadow(0 0 12px rgba(255,106,43,.35))}
+  .event h3{font-size:17px;margin-bottom:6px;letter-spacing:.3px}
+  .event p{color:var(--muted);font-size:13.5px;margin-bottom:12px;line-height:1.5}
+  .event .reward{display:inline-block;padding:6px 12px;border-radius:7px;border:1px dashed var(--gold);
+    color:var(--gold);font-weight:600;font-size:12.5px}
+
+  /* event schedule table */
+  .evt-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--card);
+    clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px);
+    -webkit-overflow-scrolling:touch}
+  .evt-tbl{width:100%;border-collapse:collapse;min-width:820px;font-size:13px}
+  .evt-tbl thead th{position:sticky;top:0;z-index:2;
+    background:linear-gradient(180deg,#1c1810,#141019);
+    color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.6px;font-size:11.5px;
+    padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  .evt-tbl td{padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top;color:var(--muted);line-height:1.45}
+  .evt-tbl tbody tr:hover{background:rgba(244,201,93,.05)}
+  .evt-tbl tr.vip{background:rgba(255,106,43,.06)}
+  .evt-tbl .ev-name{color:var(--text);font-weight:700;white-space:nowrap}
+  .evt-tbl tr.vip .ev-name{color:var(--ember)}
+  .vip-tag{font-size:10px;font-weight:800;color:#1a1206;background:linear-gradient(135deg,#ffe18a,#caa14b);
+    padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle;letter-spacing:.5px}
+  .ev-time{color:#bfe0ff;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .ev-map{color:var(--text);white-space:nowrap}
+  .ev-reward{color:var(--gold);font-size:12.5px}
+  .ev-sub{display:inline-block;padding:2px 9px;border:1px solid var(--line);border-radius:6px;font-size:11.5px;color:var(--text);white-space:nowrap}
+  .evt-note{color:var(--muted);font-size:12.5px;margin-top:14px;text-align:center}
+  .evt-note b{color:var(--gold)}
+  /* daily timeline */
+  .tl-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:50px 0 16px;flex-wrap:wrap}
+  .tl-head h3{font-size:clamp(19px,3.4vw,26px)}
+  .tl-head span{color:var(--muted);font-size:13px}
+  .tl-box{border:1px solid var(--line);background:var(--card);padding:14px 18px;
+    clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+  .tl{column-count:2;column-gap:36px}
+  .tl-row{break-inside:avoid;display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .tl-time{font-variant-numeric:tabular-nums;color:var(--gold);font-weight:700;font-size:13px;min-width:46px}
+  .tl-name{flex:1;color:var(--text);font-size:13px;line-height:1.3}
+  .tl-row.sp .tl-name{color:var(--ember);font-weight:600}
+  .tl-tag{font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:2px 7px;border-radius:5px;white-space:nowrap}
+  .tl-row.sp .tl-tag{color:#1a1206;background:linear-gradient(135deg,#ffe18a,#caa14b);border:none;font-weight:800}
+  @media(max-width:680px){.tl{column-count:1}}
+
+  /* rewards table */
+  .reward-box{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:24px}
+  .reward-row{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1px solid var(--line)}
+  .reward-row:last-child{border-bottom:none}
+  .reward-row:hover{background:rgba(244,201,93,.04)}
+  .reward-rank{display:flex;align-items:center;gap:16px;font-weight:700}
+  .medal{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-family:var(--font);color:#1a1206}
+  .m1{background:linear-gradient(145deg,#ffe18a,#e0a93a)}
+  .m2{background:linear-gradient(145deg,#e6e6ea,#a9adb8)}
+  .m3{background:linear-gradient(145deg,#e7a978,#b9713c)}
+  .mx{background:rgba(255,255,255,.08);color:var(--text)}
+  .reward-prize{color:var(--gold);font-weight:600;text-align:right}
+  /* top-race rewards: 2 phases */
+  .race-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  .race-card{border:1px solid var(--line);background:var(--card);overflow:hidden;
+    clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+  .race-head{display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(244,201,93,.10),transparent)}
+  .race-head .ph{font-weight:800;font-family:var(--font);text-transform:uppercase;letter-spacing:.5px;font-size:14px;color:var(--text)}
+  .race-head .tagp{margin-left:auto;font-size:10.5px;font-weight:800;padding:3px 10px;border-radius:6px;white-space:nowrap}
+  .tagp.alpha{color:#bfe0ff;border:1px solid rgba(120,170,255,.4);background:rgba(80,130,255,.12)}
+  .tagp.open{color:#1a1206;background:linear-gradient(135deg,#ffe18a,#caa14b)}
+  .race-tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+  .race-tbl th{text-align:left;padding:9px 14px;color:var(--gold);font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--line);font-weight:800;white-space:nowrap}
+  .race-tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--muted);vertical-align:top;line-height:1.35}
+  .race-tbl tr:last-child td{border-bottom:none}
+  .race-tbl td:first-child{color:var(--text);font-weight:600;white-space:nowrap}
+  .race-tbl .p1{color:var(--gold);font-weight:600}
+  @media(max-width:760px){.race-grid{grid-template-columns:1fr}}
+
+  /* CTA final */
+  .final{text-align:center;padding:56px 24px;margin:30px auto;max-width:980px;
+    background:radial-gradient(800px 300px at 50% 0,rgba(255,61,46,.18),transparent 70%),var(--card);
+    border:1px solid var(--line);border-radius:26px}
+  .final h2{font-size:clamp(30px,5vw,48px);margin-bottom:16px}
+  .final p{color:var(--muted);max-width:520px;margin:0 auto 30px}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
+  .social{display:flex;gap:18px;justify-content:center;margin-bottom:18px}
+  .social a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;
+    transition:.25s;font-size:18px}
+  .social a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:880px){
+    .nav-links{display:none}
+    .burger{display:block}
+    .stats,.features,.events,.classes,.gallery{grid-template-columns:1fr 1fr}
+    .cd-grid{gap:10px}
+  }
+  @media(max-width:560px){
+    .stats,.features,.events,.classes,.gallery{grid-template-columns:1fr}
+    .reward-row{flex-direction:column;gap:8px;text-align:center}
+    .reward-prize{text-align:center}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "GOLDMUVN — MU Online Season 6.21",
+  "alternateName": "GOLDMUVN Máy Chủ Phục Hưng",
+  "gamePlatform": "PC",
+  "applicationCategory": "Game",
+  "operatingSystem": "Windows",
+  "inLanguage": "vi",
+  "url": "https://bigbeargtv.github.io/goldmuvn/",
+  "description": "Máy chủ MU Online Season 6.21 - Phục Hưng. Cày cuốc công bằng, không pay-to-win, antihack đỉnh cao, sự kiện liên tục.",
+  "publisher": { "@type": "Organization", "name": "GOLDMUVN" }
+}
+</script>
+</head>
+<body>
+<div class="bg-photo"></div>
+<div class="bg-fx"></div>
+<div class="embers" id="embers"></div>
+
+<!-- ===== Bộ icon SVG tự vẽ (sprite) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <symbol id="ic-sword" viewBox="0 0 24 24"><path d="M14.5 3.5 20 9l-8 8-2.5-2.5"/><path d="M5 21l3.5-3.5"/><path d="M14.5 3.5 9.5 8.5 12 11l5-5"/><path d="m4 18 2 2"/></symbol>
+  <symbol id="ic-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></symbol>
+  <symbol id="ic-gem" viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18"/><path d="m9 3-1.5 6L12 21l4.5-12L15 3"/></symbol>
+  <symbol id="ic-reset" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v4h-4"/><path d="M12 8v4l3 2"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="ic-scale" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M7 21h10"/><path d="M5 7h14l-2-3-12 1z" opacity=".0"/><path d="M5 6h14"/><path d="M5 6 2.5 12a3 3 0 0 0 5 0z"/><path d="M19 6l2.5 6a3 3 0 0 1-5 0z"/></symbol>
+  <symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3.5 3 14 0 18-3-4-3-14.5 0-18z"/></symbol>
+  <symbol id="ic-map" viewBox="0 0 24 24"><path d="m9 4 6 2 6-2v14l-6 2-6-2-6 2V6z"/><path d="M9 4v14"/><path d="M15 6v14"/></symbol>
+  <symbol id="ic-gift" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18"/><path d="M12 9v12"/><path d="M12 9C9 9 7 5 9 4s3 3 3 5c0-2 1-4 3-5s0 5-3 5z"/></symbol>
+  <symbol id="ic-trophy" viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 5H4v2a3 3 0 0 0 3 3"/><path d="M17 5h3v2a3 3 0 0 1-3 3"/><path d="M12 14v3"/><path d="M8 21h8l-1-4H9z"/></symbol>
+  <symbol id="ic-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3"/><path d="M3 12v5c0 1.7 2.7 3 6 3 1.2 0 2.3-.2 3.2-.5"/><ellipse cx="16" cy="14" rx="5" ry="2.5"/><path d="M11 14v4c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-4"/></symbol>
+  <symbol id="ic-skull" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-5 14v3h10v-3a8 8 0 0 0-5-14z"/><circle cx="9" cy="11" r="1.6"/><circle cx="15" cy="11" r="1.6"/><path d="M12 15v2"/><path d="M9 22h6"/></symbol>
+  <symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="M8 15h2M14 15h2"/></symbol>
+  <symbol id="ic-castle" viewBox="0 0 24 24"><path d="M3 21V8l3 2V7h3v3l3-3 3 3V7h3v3l3-2v13z"/><path d="M10 21v-4h4v4"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.5a3 3 0 0 1 0 5.5"/><path d="M18 14c2 .8 3 2.7 3 6"/></symbol>
+  <symbol id="ic-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4v-4H4z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></symbol>
+  <symbol id="ic-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h11l-2 3 2 3H5"/></symbol>
+  <symbol id="ic-frame" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="9" r="1.5"/><path d="m4 18 5-5 4 4 3-3 4 4"/></symbol>
+  <symbol id="ic-hourglass" viewBox="0 0 24 24"><path d="M6 3h12"/><path d="M6 21h12"/><path d="M7 3c0 5 10 5 10 9s-10 4-10 9"/><path d="M17 3c0 5-10 5-10 9s10 4 10 9"/></symbol>
+  <symbol id="ic-fb" viewBox="0 0 24 24"><path d="M14 8h2V5h-2c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8z"/></symbol>
+  <symbol id="ic-discord" viewBox="0 0 24 24"><path d="M7 7c2-1 8-1 10 0 1.5 2.5 2 5.5 2 9-1.2 1-2.5 1.6-3.8 2l-1-1.8M7 7C5.5 9.5 5 12.5 5 16c1.2 1 2.5 1.6 3.8 2l1-1.8M9.5 14c1.5.8 3.5.8 5 0"/><circle cx="9.3" cy="12.5" r="1"/><circle cx="14.7" cy="12.5" r="1"/></symbol>
+  <symbol id="ic-yt" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="m10 9 5 3-5 3z"/></symbol>
+  <symbol id="ic-chat-round" viewBox="0 0 24 24"><path d="M12 4c4.4 0 8 2.9 8 6.5 0 3.6-3.6 6.5-8 6.5-.9 0-1.8-.1-2.6-.3L5 19l1-3c-1.2-1.2-2-2.7-2-4.5C4 6.9 7.6 4 12 4z"/></symbol>
+</defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <div class="brand"><span class="mark">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#1a1206" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2 13.5 6 12 9 10.5 6z"/><path d="M12 9v9"/><path d="M8 18h8"/>
+        <path d="M10.5 6C7 6 4 8 3 12c2.5-.5 4 .5 5 2"/><path d="M13.5 6c3.5 0 6.5 2 7.5 6-2.5-.5-4 .5-5 2"/>
+      </svg>
+    </span> GOLDMU<span class="gold">VN</span></div>
+    <nav class="nav-links">
+      <a href="#info">Thông Tin</a>
+      <a href="#features">Tính Năng</a>
+      <a href="#events">Sự Kiện</a>
+      <a href="#" onclick="openNews(event)">Hướng Dẫn</a>
+      <a href="#download">Tải Game</a>
+      <a href="#support">Hỗ Trợ</a>
+    </nav>
+    <a href="#download" class="nav-cta">CHƠI NGAY</a>
+    <button class="burger" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+   <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="badge"><span class="dot"></span> Season 6.21 · Máy Chủ Phục Hưng</div>
+      <h1 class="glow-text"><span class="l1">TÔN TRỌNG</span><br><span class="l2">CỔ ĐIỂN</span></h1>
+      <p class="sub">Máy chủ <b class="gold">Phục Hưng</b> của <b class="gold">GOLDMUVN</b> chính thức khai mở — gameplay Season 6.21, giữ trọn chất MU cổ điển, cày cuốc công bằng, không pay-to-win. Sẵn sàng tranh ngôi vương chưa, chiến binh?</p>
+
+      <div class="tags">
+        <div class="tag">EXP <b>x150</b></div>
+        <div class="tag">Drop <b>30%</b></div>
+        <div class="tag">Reset <b>Custom</b></div>
+        <div class="tag"><b>Antihack</b> Pro</div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#download" class="btn btn-primary"><svg class="i"><use href="#ic-sword"/></svg> TẢI GAME NGAY</a>
+        <a href="#info" class="btn btn-ghost">Xem chi tiết</a>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-ring"></div>
+      <div class="hero-ring r2"></div>
+      <!-- Nhân vật chính: minh họa Dark Knight có cánh. Thay bằng ảnh render game của bạn nếu muốn. -->
+      <svg class="hero-char" viewBox="0 0 360 460" xmlns="http://www.w3.org/2000/svg" aria-label="Nhân vật MU">
+        <defs>
+          <linearGradient id="armor" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3a4156"/><stop offset=".5" stop-color="#222637"/><stop offset="1" stop-color="#14161f"/>
+          </linearGradient>
+          <linearGradient id="goldg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffe7a3"/><stop offset="1" stop-color="#c9962f"/>
+          </linearGradient>
+          <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff8a3d"/><stop offset=".6" stop-color="#ff3d2e"/><stop offset="1" stop-color="#7a1320"/>
+          </linearGradient>
+          <linearGradient id="blade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#bfefff"/><stop offset="1" stop-color="#5aa9c9"/>
+          </linearGradient>
+          <radialGradient id="aura" cx="50%" cy="45%" r="55%">
+            <stop offset="0" stop-color="rgba(255,140,60,.45)"/><stop offset="1" stop-color="transparent"/>
+          </radialGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+        </defs>
+
+        <ellipse cx="180" cy="210" rx="160" ry="180" fill="url(#aura)"/>
+
+        <!-- Wings -->
+        <g opacity=".96">
+          <path d="M150 150 C70 90 30 120 18 175 C60 160 78 175 95 200 C55 200 40 230 42 268 C82 240 110 250 132 268 C108 215 120 175 150 150 Z" fill="url(#wing)" filter="url(#soft)"/>
+          <path d="M210 150 C290 90 330 120 342 175 C300 160 282 175 265 200 C305 200 320 230 318 268 C278 240 250 250 228 268 C252 215 240 175 210 150 Z" fill="url(#wing)" filter="url(#soft)"/>
+        </g>
+
+        <!-- Sword behind -->
+        <g transform="rotate(20 180 230)">
+          <rect x="176" y="40" width="10" height="250" rx="3" fill="url(#blade)"/>
+          <polygon points="181,28 188,46 174,46" fill="#eafaff"/>
+          <rect x="160" y="288" width="42" height="12" rx="3" fill="url(#goldg)"/>
+          <rect x="176" y="298" width="10" height="40" rx="3" fill="#2a2f3d"/>
+          <circle cx="181" cy="342" r="8" fill="url(#goldg)"/>
+        </g>
+
+        <!-- Body / torso -->
+        <path d="M120 250 C120 215 145 200 180 200 C215 200 240 215 240 250 L250 360 C250 400 210 420 180 420 C150 420 110 400 110 360 Z" fill="url(#armor)" stroke="#0a0c12" stroke-width="2"/>
+        <!-- chest plate detail -->
+        <path d="M180 210 L210 235 L200 300 L180 320 L160 300 L150 235 Z" fill="#2b3142" stroke="url(#goldg)" stroke-width="2"/>
+        <circle cx="180" cy="262" r="9" fill="url(#goldg)"/>
+        <!-- Shoulders -->
+        <path d="M118 252 C95 235 95 270 112 288 C132 282 140 262 140 252 Z" fill="url(#goldg)"/>
+        <path d="M242 252 C265 235 265 270 248 288 C228 282 220 262 220 252 Z" fill="url(#goldg)"/>
+        <!-- Arms -->
+        <rect x="112" y="280" width="26" height="90" rx="12" fill="url(#armor)"/>
+        <rect x="222" y="280" width="26" height="90" rx="12" fill="url(#armor)"/>
+        <!-- Belt -->
+        <rect x="135" y="350" width="90" height="16" rx="6" fill="#1a1d28" stroke="url(#goldg)" stroke-width="1.5"/>
+
+        <!-- Neck -->
+        <rect x="166" y="186" width="28" height="26" fill="#262b3a"/>
+        <!-- Helmet -->
+        <path d="M150 150 C150 118 168 100 180 100 C192 100 210 118 210 150 C210 182 198 196 180 196 C162 196 150 182 150 150 Z" fill="url(#armor)" stroke="#0a0c12" stroke-width="2"/>
+        <path d="M180 100 C168 100 150 118 150 150 L168 150 C168 124 174 110 180 106 Z" fill="#454d63"/>
+        <!-- Helmet crest -->
+        <path d="M178 92 C176 78 184 70 196 62 C190 80 196 90 192 100 Z" fill="url(#goldg)"/>
+        <!-- Visor + glowing eyes -->
+        <rect x="156" y="142" width="48" height="20" rx="5" fill="#0a0c12"/>
+        <circle cx="170" cy="152" r="4.5" fill="#ff5a2b"><animate attributeName="opacity" values="1;.4;1" dur="2.4s" repeatCount="indefinite"/></circle>
+        <circle cx="190" cy="152" r="4.5" fill="#ff5a2b"><animate attributeName="opacity" values="1;.4;1" dur="2.4s" repeatCount="indefinite"/></circle>
+        <rect x="158" y="166" width="44" height="4" rx="2" fill="#2b3142"/>
+        <rect x="160" y="174" width="40" height="4" rx="2" fill="#2b3142"/>
+      </svg>
+    </div>
+   </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown">
+      <div class="cd-label"><svg class="i" style="width:16px;height:16px;color:var(--gold)"><use href="#ic-hourglass"/></svg> Đếm ngược ngày khai mở</div>
+      <div class="cd-grid">
+        <div class="cd-box"><div class="cd-num" id="d">00</div><div class="cd-unit">Ngày</div></div>
+        <div class="cd-box"><div class="cd-num" id="h">00</div><div class="cd-unit">Giờ</div></div>
+        <div class="cd-box"><div class="cd-num" id="m">00</div><div class="cd-unit">Phút</div></div>
+        <div class="cd-box"><div class="cd-num" id="s">00</div><div class="cd-unit">Giây</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVER INFO -->
+<section id="info">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Thông số server</div>
+      <h2>Chỉ Số Máy Chủ</h2>
+      <p>Cấu hình cân bằng cho người chơi cày cuốc — đường dài, công bằng, lâu dài.</p>
+    </div>
+    <div class="grid stats reveal">
+      <div class="stat"><div class="ic"><svg class="i"><use href="#ic-bolt"/></svg></div><div class="v">x150</div><div class="k">Tỷ lệ EXP</div></div>
+      <div class="stat"><div class="ic"><svg class="i"><use href="#ic-gem"/></svg></div><div class="v">30%</div><div class="k">Tỷ lệ Drop</div></div>
+      <div class="stat"><div class="ic"><svg class="i"><use href="#ic-reset"/></svg></div><div class="v">400</div><div class="k">Point / Reset</div></div>
+      <div class="stat"><div class="ic"><svg class="i"><use href="#ic-shield"/></svg></div><div class="v">99.9%</div><div class="k">Uptime ổn định</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Vì sao chọn chúng tôi</div>
+      <h2>Tính Năng Nổi Bật</h2>
+      <p>Trải nghiệm MU custom được tối ưu từng chi tiết, mượt mà và công bằng.</p>
+    </div>
+    <div class="grid features reveal">
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-shield"/></svg></div><h3>Antihack đỉnh cao</h3><p>Bảo vệ 24/7, chống hack/bot/speed, môi trường chơi sạch và công bằng tuyệt đối.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-scale"/></svg></div><h3>Không Pay-to-Win</h3><p>Mọi item sức mạnh đều cày được trong game. Nạp chỉ để hỗ trợ, không phá cân bằng.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-globe"/></svg></div><h3>Server Quốc Tế</h3><p>Đường truyền tối ưu, ping thấp, không lag, chịu tải hàng nghìn người chơi cùng lúc.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-map"/></svg></div><h3>Map & Boss Custom</h3><p>Hệ thống map mới, boss độc quyền với phần thưởng giá trị, làm mới hàng ngày.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-castle"/></svg></div><h3>PK & Castle Siege</h3><p>Chiến trận guild quy mô lớn, tranh đoạt lãnh thổ, vinh danh bang hội mạnh nhất.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-gift"/></svg></div><h3>Quà tân thủ</h3><p>Đăng ký nhận ngay gói wing, set đồ và point khởi đầu giúp bắt nhịp nhanh chóng.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Chọn lối chơi của bạn</div>
+      <h2>Hệ Thống Nhân Vật</h2>
+      <p>7 nhân vật để bạn chọn lối chơi.</p>
+    </div>
+    <div class="clsrow reveal">
+
+      <div class="cls" style="--cglow:rgba(255,106,43,.25)">
+        <div class="cls-art">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <path d="M52 70 L40 30 L62 58 Z" fill="#9fd8ff"/><rect x="56" y="20" width="6" height="120" rx="2" fill="#bfeaff"/>
+            <path d="M100 96 C100 70 120 58 145 70 L150 200 L70 200 L60 110 C60 92 80 86 100 96Z" fill="#2b3142" stroke="#caa14b" stroke-width="2"/>
+            <path d="M118 86 C118 86 150 86 150 118 C140 110 128 112 122 120Z" fill="#caa14b"/>
+            <circle cx="118" cy="64" r="26" fill="#3a4156" stroke="#0a0c12" stroke-width="2"/>
+            <rect x="100" y="58" width="36" height="10" rx="3" fill="#0a0c12"/>
+            <circle cx="110" cy="63" r="3.2" fill="#ff5a2b"/><circle cx="126" cy="63" r="3.2" fill="#ff5a2b"/>
+          </svg>
+        </div>
+        <div class="cls-body"><h3>Dark Knight</h3><div class="role">Cận chiến · Tank</div>
+          <p>Sát thương vật lý áp đảo, máu trâu, trùm cận chiến PK.</p>
+          <div class="cls-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      </div>
+
+      <div class="cls" style="--cglow:rgba(150,90,255,.28)">
+        <div class="cls-art">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <rect x="138" y="40" width="6" height="150" rx="2" fill="#5b4a2e"/>
+            <circle cx="141" cy="40" r="13" fill="#b98bff"/><circle cx="141" cy="40" r="6" fill="#fff"/>
+            <path d="M60 200 L72 96 C76 70 124 70 128 96 L140 200 Z" fill="#3a2c5e" stroke="#9b7bff" stroke-width="2"/>
+            <path d="M100 96 L112 200 L88 200 Z" fill="#241a3d"/>
+            <circle cx="100" cy="74" r="24" fill="#2a2140" stroke="#0a0c12" stroke-width="2"/>
+            <path d="M76 76 C76 50 124 50 124 76 C112 64 88 64 76 76Z" fill="#5b4a2e"/>
+            <circle cx="91" cy="76" r="3.2" fill="#c79bff"/><circle cx="109" cy="76" r="3.2" fill="#c79bff"/>
+          </svg>
+        </div>
+        <div class="cls-body"><h3>Dark Wizard</h3><div class="role">Phép thuật · AoE</div>
+          <p>Vua sát thương phép diện rộng, dọn quái cực nhanh.</p>
+          <div class="cls-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      </div>
+
+      <div class="cls" style="--cglow:rgba(80,220,140,.25)">
+        <div class="cls-art">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <path d="M150 40 C120 90 120 150 150 200" fill="none" stroke="#7be0a0" stroke-width="5"/>
+            <line x1="150" y1="40" x2="150" y2="200" stroke="#cfa46a" stroke-width="2"/>
+            <path d="M64 200 L74 100 C78 78 122 78 126 100 L136 200 Z" fill="#234a36" stroke="#7be0a0" stroke-width="2"/>
+            <circle cx="100" cy="78" r="23" fill="#2e5c43" stroke="#0a0c12" stroke-width="2"/>
+            <path d="M78 78 C78 54 122 54 122 78 C110 68 90 68 78 78Z" fill="#a9e6c2"/>
+            <circle cx="91" cy="80" r="3" fill="#d8ffe8"/><circle cx="109" cy="80" r="3" fill="#d8ffe8"/>
+          </svg>
+        </div>
+        <div class="cls-body"><h3>Fairy Elf</h3><div class="role">Tầm xa · Hỗ trợ</div>
+          <p>Cung thủ tầm xa, buff đồng đội và khắc chế tốc độ.</p>
+          <div class="cls-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+      </div>
+
+      <div class="cls" style="--cglow:rgba(255,61,46,.3)">
+        <div class="cls-art">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <rect x="48" y="28" width="6" height="120" rx="2" fill="#ff9a6b" transform="rotate(-12 51 88)"/>
+            <rect x="146" y="28" width="6" height="120" rx="2" fill="#ff9a6b" transform="rotate(12 149 88)"/>
+            <path d="M62 200 L74 92 C78 68 122 68 126 92 L138 200 Z" fill="#3d1f22" stroke="#ff5a2b" stroke-width="2"/>
+            <path d="M100 92 L110 200 L90 200 Z" fill="#511a1a"/>
+            <circle cx="100" cy="70" r="24" fill="#4a2226" stroke="#0a0c12" stroke-width="2"/>
+            <rect x="82" y="64" width="36" height="9" rx="3" fill="#0a0c12"/>
+            <circle cx="91" cy="69" r="3.2" fill="#ffd34d"/><circle cx="109" cy="69" r="3.2" fill="#ffd34d"/>
+          </svg>
+        </div>
+        <div class="cls-body"><h3>Magic Gladiator</h3><div class="role">Lai · Linh hoạt</div>
+          <p>Kết hợp vật lý và phép, cơ động, mạnh ngay early game.</p>
+          <div class="cls-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      </div>
+
+      <div class="cls" style="--cglow:rgba(244,201,93,.3)">
+        <div class="cls-art">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <rect x="140" y="46" width="6" height="150" rx="2" fill="#caa14b"/>
+            <path d="M143 36 l10 14 -10 8 -10 -8 Z" fill="#ffe18a"/>
+            <path d="M52 200 C52 130 70 92 100 92 C130 92 148 130 148 200 Z" fill="#1f1a10" stroke="#f4c95d" stroke-width="2"/>
+            <path d="M74 96 C78 74 122 74 126 96 L120 170 L80 170 Z" fill="#3a3320" stroke="#caa14b" stroke-width="1.5"/>
+            <circle cx="100" cy="72" r="24" fill="#2c2615" stroke="#0a0c12" stroke-width="2"/>
+            <path d="M88 50 l12 -16 12 16 Z" fill="#ffe18a"/>
+            <circle cx="91" cy="74" r="3.2" fill="#ffe7a3"/><circle cx="109" cy="74" r="3.2" fill="#ffe7a3"/>
+          </svg>
+        </div>
+        <div class="cls-body"><h3>Dark Lord</h3><div class="role">Chỉ huy · Triệu hồi thú</div>
+          <p>Cưỡi thú chiến, buff bang hội, thủ lĩnh chiến trường.</p>
+          <div class="cls-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      </div>
+
+      <div class="cls" style="--cglow:rgba(70,200,220,.28)">
+        <div class="cls-art">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="140" cy="70" r="16" fill="none" stroke="#6fe6ff" stroke-width="3"/>
+            <circle cx="140" cy="70" r="6" fill="#bff4ff"/>
+            <path d="M64 200 L74 98 C78 76 122 76 126 98 L136 200 Z" fill="#15323a" stroke="#5fd6e8" stroke-width="2"/>
+            <path d="M100 98 L110 200 L90 200 Z" fill="#0e2228"/>
+            <circle cx="100" cy="76" r="23" fill="#163b44" stroke="#0a0c12" stroke-width="2"/>
+            <path d="M78 76 C78 52 122 52 122 76 C110 66 90 66 78 76Z" fill="#2a6f7d"/>
+            <circle cx="91" cy="78" r="3" fill="#c8fbff"/><circle cx="109" cy="78" r="3" fill="#c8fbff"/>
+          </svg>
+        </div>
+        <div class="cls-body"><h3>Summoner</h3><div class="role">Phép tối · Debuff</div>
+          <p>Triệu hồi sức mạnh hắc ám, debuff và khống chế kẻ địch.</p>
+          <div class="cls-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      </div>
+
+      <div class="cls" style="--cglow:rgba(255,90,40,.28)">
+        <div class="cls-art">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <path d="M78 110 L64 94" stroke="#3a1d18" stroke-width="13" stroke-linecap="round"/>
+            <path d="M122 110 L136 94" stroke="#3a1d18" stroke-width="13" stroke-linecap="round"/>
+            <circle cx="62" cy="90" r="15" fill="#5a2a1c" stroke="#ff7a3d" stroke-width="2"/>
+            <circle cx="138" cy="90" r="15" fill="#5a2a1c" stroke="#ff7a3d" stroke-width="2"/>
+            <path d="M62 200 L72 102 C76 80 124 80 128 102 L138 200 Z" fill="#3a1d18" stroke="#ff7a3d" stroke-width="2"/>
+            <circle cx="100" cy="70" r="24" fill="#4a241a" stroke="#0a0c12" stroke-width="2"/>
+            <path d="M78 70 C78 46 122 46 122 70 C110 60 90 60 78 70Z" fill="#7a3a22"/>
+            <circle cx="91" cy="70" r="3.2" fill="#ffb060"/><circle cx="109" cy="70" r="3.2" fill="#ffb060"/>
+          </svg>
+        </div>
+        <div class="cls-body"><h3>Rage Fighter</h3><div class="role">Cận chiến · Combo</div>
+          <p>Võ sĩ cận chiến, combo tốc độ cao và khả năng sinh tồn tốt.</p>
+          <div class="cls-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      </div>
+
+    </div>
+
+    <!-- GALLERY: gắn ảnh trong game của bạn vào đây -->
+    <div class="sec-head reveal" style="margin-top:48px;margin-bottom:30px">
+      <div class="kick">Khoảnh khắc trong game</div>
+      <h2 style="font-size:clamp(24px,4vw,34px)">Hình Ảnh Server</h2>
+    </div>
+    <div class="grid gallery reveal">
+      <!-- Cách dùng: thay nội dung mỗi ô bằng  <img src="anh-cua-ban.jpg" alt=""> -->
+      <div class="shot"><div><svg class="i"><use href="#ic-frame"/></svg>Thả ảnh PK / Boss vào đây</div></div>
+      <div class="shot"><div><svg class="i"><use href="#ic-frame"/></svg>Thả ảnh Castle Siege vào đây</div></div>
+      <div class="shot"><div><svg class="i"><use href="#ic-frame"/></svg>Thả ảnh Map / Item vào đây</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Lịch hoạt động</div>
+      <h2>Bảng Chi Tiết Sự Kiện</h2>
+      <p>Toàn bộ khung giờ sự kiện trong ngày trên máy chủ Phục Hưng.</p>
+    </div>
+    <div class="evt-wrap reveal">
+      <table class="evt-tbl">
+        <thead>
+          <tr><th>Sự kiện</th><th>Sub</th><th>Thời gian</th><th>Map</th><th>Phần thưởng</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="ev-name">Huyết Lâu</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">1h30 · 7h30 · 15h00</td><td class="ev-map">Davias</td><td class="ev-reward">Drop Ngọc Hỗn Nguyên. Sub2: mỗi 350 quái rơi 1 ngọc · Sub3: 450 · Sub4: 600</td></tr>
+          <tr class="vip"><td class="ev-name">Huyết Lâu<span class="vip-tag">VIP</span></td><td><span class="ev-sub">1</span></td><td class="ev-time">11h35 · 20h25</td><td class="ev-map">Davias</td><td class="ev-reward">Box VIP / Boss drop 1 cụm (B,S,C,L). Mỗi 200 quái rơi 1 ngọc</td></tr>
+          <tr><td class="ev-name">Quảng Trường Quỷ</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">0h30 · 6h30 · 14h00 · 18h30</td><td class="ev-map">Noria</td><td class="ev-reward">1 ngọc bất kì (B,S,C,L). Sub2: mỗi 600 quái · Sub3: 700 · Sub4: 800</td></tr>
+          <tr><td class="ev-name">Hỗn Nguyên Lâu</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">2h30 · 8h30 · 10h45 · 15h45</td><td class="ev-map">—</td><td class="ev-reward">Drop 2 món (Đồ thần, B,S,C,L)</td></tr>
+          <tr class="vip"><td class="ev-name">Hỗn Nguyên Lâu<span class="vip-tag">VIP</span></td><td><span class="ev-sub">1</span></td><td class="ev-time">12h35 · 19h30</td><td class="ev-map">—</td><td class="ev-reward">1 đồ thần + 1 cụm ngọc (B,S,C,L)</td></tr>
+          <tr><td class="ev-name">Rồng Đỏ</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">4h00 · 10h00 · 16h30</td><td class="ev-map">Noria, Davias, Lorencia</td><td class="ev-reward">Ngẫu nhiên cụm ngọc 10 (B,S,C,L,Cre)</td></tr>
+          <tr class="vip"><td class="ev-name">Rồng Đỏ<span class="vip-tag">VIP</span></td><td><span class="ev-sub">1</span></td><td class="ev-time">22h30</td><td class="ev-map">Noria, Davias, Lorencia</td><td class="ev-reward">Ngẫu nhiên cụm 20 (B,S)</td></tr>
+          <tr><td class="ev-name">Thỏ Ngọc</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">4h30 · 10h30 · 17h00</td><td class="ev-map">Elbeland</td><td class="ev-reward">—</td></tr>
+          <tr class="vip"><td class="ev-name">Thỏ Ngọc<span class="vip-tag">VIP</span></td><td><span class="ev-sub">1</span></td><td class="ev-time">13h30</td><td class="ev-map">Elbeland</td><td class="ev-reward">—</td></tr>
+          <tr><td class="ev-name">Mùa Hè</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">3h30 · 9h30 · 16h15</td><td class="ev-map">Atlans</td><td class="ev-reward">—</td></tr>
+          <tr class="vip"><td class="ev-name">Mùa Hè<span class="vip-tag">VIP</span></td><td><span class="ev-sub">1</span></td><td class="ev-time">20h00</td><td class="ev-map">Atlans</td><td class="ev-reward">—</td></tr>
+          <tr><td class="ev-name">Săn Lộc</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">1h00 · 7h00 · 14h30 · 19h00</td><td class="ev-map">Lorencia</td><td class="ev-reward">B,S,C,L,Cre,Zen</td></tr>
+          <tr><td class="ev-name">Ma Vương</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">2h00 · 15h30 · 17h30 · 23h30</td><td class="ev-map">Lorencia, Noria</td><td class="ev-reward">2 ngọc (B,S,C,L,Cre)</td></tr>
+          <tr><td class="ev-name">Binh Đoàn Hoàng Kim</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">8h00 · 18h00</td><td class="ev-map">Random All Map</td><td class="ev-reward">Box Kundun 1-5</td></tr>
+          <tr class="vip"><td class="ev-name">Binh Đoàn Hoàng Kim<span class="vip-tag">VIP</span></td><td><span class="ev-sub">1</span></td><td class="ev-time">12h00 · 20h45</td><td class="ev-map">Random All Map</td><td class="ev-reward">Box Kundun 1-5 / Box Kundun VIP</td></tr>
+          <tr><td class="ev-name">Phù Thủy Trắng</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">3h00 · 5h00 · 9h00 · 16h00 · 23h00</td><td class="ev-map">Noria, Davias, Lorencia</td><td class="ev-reward">Drop 1B / Zen / Nhẫn phù thủy</td></tr>
+          <tr><td class="ev-name">Chiến Trường Sinh Tồn</td><td><span class="ev-sub">1</span></td><td class="ev-time">13h00 · 21h15</td><td class="ev-map">Lorencia NPC (139,139)</td><td class="ev-reward">100k WCoin</td></tr>
+          <tr><td class="ev-name">Medusa</td><td><span class="ev-sub">1</span></td><td class="ev-time">21h30</td><td class="ev-map">Swamp of Peace</td><td class="ev-reward">2 Đồ Cấp 7 ngẫu nhiên (2–3 OP) + 1 Vũ Khí Rồng (1–3 OP) + 2 Hộp Trang Sức (1) + 1 Hộp Khuyên Tai</td></tr>
+          <tr><td class="ev-name">Kundun</td><td><span class="ev-sub">1</span></td><td class="ev-time">22h00</td><td class="ev-map">Kalima 7</td><td class="ev-reward">2 Ngọc Trang Sức Lv.1 + 2 Đồ Thần + 1 Hộp Trang Sức</td></tr>
+          <tr><td class="ev-name">Erohim</td><td><span class="ev-sub">Map CTC</span></td><td class="ev-time">—</td><td class="ev-map">Land of Trial</td><td class="ev-reward">1 Cụm Ngọc Random (B,S,C,L)</td></tr>
+          <tr><td class="ev-name">Địa Long</td><td><span class="ev-sub">1</span></td><td class="ev-time">11h00</td><td class="ev-map">Lorencia NPC (131,121)</td><td class="ev-reward">2 Hộp Khuyên Tai + 1 Hộp Trang Sức (1) + 2 Ngọc Trang Sức Lv1</td></tr>
+          <tr><td class="ev-name">Dopple</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">05h30</td><td class="ev-map">Elbeland</td><td class="ev-reward">2 Hộp Bạc / 1 Box Kundun (1-2-3-4) + Hộp Vàng: Cụm 10 (C,L,Cre,DNT,TLCC)</td></tr>
+          <tr><td class="ev-name">Giờ Vàng</td><td><span class="ev-sub">2-3-4</span></td><td class="ev-time">0h00 · 6h00 · 18h00</td><td class="ev-map">All Map</td><td class="ev-reward">Tăng 20% (Exp, Zen, Drop)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="evt-note">Hàng <b>VIP</b> dành cho tài khoản VIP · Giờ sự kiện theo múi giờ máy chủ (GMT+7) · Lịch có thể thay đổi theo thông báo.</p>
+
+    <div class="tl-head reveal">
+      <h3>Lịch Theo Giờ Trong Ngày</h3>
+      <span>Khung giờ <b style="color:var(--gold)">vàng</b> = sự kiện đặc biệt / VIP</span>
+    </div>
+    <div class="tl-box reveal">
+      <div class="tl">
+        <div class="tl-row"><span class="tl-time">00:00</span><span class="tl-name">Giờ Vàng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">00:30</span><span class="tl-name">Quảng Trường Quỷ</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">01:00</span><span class="tl-name">Săn Lộc</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">01:30</span><span class="tl-name">Huyết Lâu</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">02:00</span><span class="tl-name">Ma Vương</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">02:30</span><span class="tl-name">Hỗn Nguyên Lâu</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">03:00</span><span class="tl-name">Phù Thủy Trắng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">03:30</span><span class="tl-name">Mùa Hè</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">04:00</span><span class="tl-name">Rồng Đỏ</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">04:30</span><span class="tl-name">Thỏ Ngọc</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">05:00</span><span class="tl-name">Phù Thủy Trắng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">05:30</span><span class="tl-name">Dopple</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">06:00</span><span class="tl-name">Giờ Vàng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">06:30</span><span class="tl-name">Quảng Trường Quỷ</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">07:00</span><span class="tl-name">Săn Lộc</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">07:30</span><span class="tl-name">Huyết Lâu</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">08:00</span><span class="tl-name">Binh Đoàn Hoàng Kim</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">08:30</span><span class="tl-name">Hỗn Nguyên Lâu</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">09:00</span><span class="tl-name">Phù Thủy Trắng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">09:30</span><span class="tl-name">Sự Kiện Mùa Hè</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">10:00</span><span class="tl-name">Rồng Đỏ</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">10:30</span><span class="tl-name">Thỏ Ngọc</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row sp"><span class="tl-time">10:45</span><span class="tl-name">Hỗn Nguyên Lâu</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">11:00</span><span class="tl-name">Boss Địa Long</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">11:35</span><span class="tl-name">Huyết Lâu VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">12:00</span><span class="tl-name">Binh Đoàn Hoàng Kim VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">12:35</span><span class="tl-name">Hỗn Nguyên Lâu VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">13:00</span><span class="tl-name">Chiến Trường Sinh Tồn</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">13:30</span><span class="tl-name">Thỏ Ngọc VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row"><span class="tl-time">14:00</span><span class="tl-name">Quảng Trường Quỷ</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">14:30</span><span class="tl-name">Săn Lộc</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">15:00</span><span class="tl-name">Huyết Lâu</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">15:30</span><span class="tl-name">Ma Vương</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">15:45</span><span class="tl-name">Hỗn Nguyên Lâu</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">16:00</span><span class="tl-name">Phù Thủy Trắng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">16:15</span><span class="tl-name">Sự Kiện Mùa Hè</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">16:30</span><span class="tl-name">Rồng Đỏ</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">17:00</span><span class="tl-name">Thỏ Ngọc</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">17:30</span><span class="tl-name">Ma Vương</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">18:00</span><span class="tl-name">Binh Đoàn Hoàng Kim + Giờ Vàng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">18:30</span><span class="tl-name">Quảng Trường Quỷ</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">19:00</span><span class="tl-name">Săn Lộc</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row sp"><span class="tl-time">19:30</span><span class="tl-name">Hỗn Nguyên Lâu VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">20:00</span><span class="tl-name">Mùa Hè VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">20:25</span><span class="tl-name">Huyết Lâu VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">20:45</span><span class="tl-name">Binh Đoàn Hoàng Kim VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">21:15</span><span class="tl-name">Chiến Trường Sinh Tồn</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">21:30</span><span class="tl-name">Medusa</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">21:50</span><span class="tl-name">WUKONG</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">22:00</span><span class="tl-name">KunDun</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row sp"><span class="tl-time">22:30</span><span class="tl-name">Rồng Đỏ VIP</span><span class="tl-tag">Event</span></div>
+        <div class="tl-row"><span class="tl-time">23:00</span><span class="tl-name">Phù Thủy Trắng</span><span class="tl-tag">2-3-4</span></div>
+        <div class="tl-row"><span class="tl-time">23:30</span><span class="tl-name">Ma Vương</span><span class="tl-tag">2-3-4</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REWARDS -->
+<section id="rewards">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Bảng vinh danh</div>
+      <h2>Phần Thưởng Đua Top</h2>
+      <p>Hai đợt đua: Alpha Test và Khai Mở (Open Beta).</p>
+    </div>
+    <div class="race-grid reveal">
+
+      <div class="race-card">
+        <div class="race-head"><span class="ph">Đợt 1 · Alpha Test</span><span class="tagp alpha">In-game</span></div>
+        <table class="race-tbl">
+          <thead><tr><th>Sự kiện</th><th>Top 1</th><th>Top 2</th><th>Top 3</th></tr></thead>
+          <tbody>
+            <tr><td>Top Reset</td><td class="p1">5.000 WCoin</td><td>3.000 WCoin</td><td>2.000 WCoin</td></tr>
+            <tr><td>Top Level</td><td class="p1">3.000 WCoin</td><td>2.000 WCoin</td><td>1.000 WCoin</td></tr>
+            <tr><td>Top Nạp</td><td class="p1">Set VIP + Wing 2.5</td><td>Wing 2.5</td><td>Box Ngọc x50</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="race-card">
+        <div class="race-head"><span class="ph">Đợt 2 · Khai Mở</span><span class="tagp open">Tiền mặt + Item</span></div>
+        <table class="race-tbl">
+          <thead><tr><th>Sự kiện</th><th>Top 1</th><th>Top 2</th><th>Top 3</th></tr></thead>
+          <tbody>
+            <tr><td>Top Reset</td><td class="p1">5.000.000đ</td><td>3.000.000đ</td><td>1.500.000đ</td></tr>
+            <tr><td>Top Level</td><td class="p1">3.000.000đ</td><td>2.000.000đ</td><td>1.000.000đ</td></tr>
+            <tr><td>Top Nạp</td><td class="p1">5.000.000đ + Set VIP</td><td>3.000.000đ</td><td>1.500.000đ</td></tr>
+            <tr><td>Top Bang Hội</td><td class="p1">5.000.000đ + Wing 4</td><td>2.000.000đ</td><td>1.000.000đ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <p class="evt-note">Số liệu phần thưởng là tạm tính — BQT sẽ chốt con số chính thức trước mỗi đợt đua.</p>
+  </div>
+</section>
+
+<!-- HƯỚNG DẪN -->
+<section id="guide">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Bắt đầu nhanh</div>
+      <h2>Hướng Dẫn Tham Gia</h2>
+      <p>4 bước đơn giản để vào game chiến cùng anh em.</p>
+    </div>
+    <div class="grid features reveal">
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-users"/></svg></div><h3>1. Đăng ký tài khoản</h3><p>Tạo tài khoản trên trang chủ chỉ trong 1 phút.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-download"/></svg></div><h3>2. Tải & cài game</h3><p>Tải bản Full + Patch mới nhất, giải nén rồi chạy game.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-coins"/></svg></div><h3>3. Nạp WCoin</h3><p>Nạp thẻ / chuyển khoản nhận WCoin, mua vật phẩm hỗ trợ.</p></div>
+      <div class="feat"><div class="ic"><svg class="i"><use href="#ic-sword"/></svg></div><h3>4. Vào game chiến</h3><p>Chọn nhân vật, cày cuốc và tranh ngôi vương ngay.</p></div>
+    </div>
+    <div class="hero-cta reveal" style="justify-content:center;margin-top:24px">
+      <a href="#" onclick="openNews(event)" class="btn btn-ghost">Xem tất cả bài hướng dẫn →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TẢI GAME -->
+<section id="download">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Sẵn sàng chiến đấu</div>
+      <h2>Tải Game</h2>
+      <p>Tải bộ cài đầy đủ và bản vá mới nhất để bắt đầu.</p>
+    </div>
+    <div class="hero-cta reveal" style="justify-content:center">
+      <a href="#" class="btn btn-primary"><svg class="i"><use href="#ic-download"/></svg> Tải Full (Google Drive)</a>
+      <a href="#" class="btn btn-ghost"><svg class="i"><use href="#ic-download"/></svg> Tải Full (Fshare)</a>
+      <a href="#" class="btn btn-ghost"><svg class="i"><use href="#ic-download"/></svg> Patch mới nhất</a>
+    </div>
+  </div>
+</section>
+
+<!-- HỖ TRỢ -->
+<section id="support">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Kết nối cộng đồng</div>
+      <h2>Hỗ Trợ</h2>
+      <p>Liên hệ BQT và tham gia cộng đồng GOLDMUVN.</p>
+    </div>
+    <div class="grid features reveal">
+      <a href="#" class="feat"><div class="ic"><svg class="i"><use href="#ic-discord"/></svg></div><h3>Discord</h3><p>Tham gia máy chủ Discord — hỗ trợ nhanh nhất 24/7.</p></a>
+      <a href="#" class="feat"><div class="ic"><svg class="i"><use href="#ic-fb"/></svg></div><h3>Fanpage Facebook</h3><p>Theo dõi tin tức, sự kiện và thông báo bảo trì.</p></a>
+      <a href="#" class="feat"><div class="ic"><svg class="i"><use href="#ic-users"/></svg></div><h3>Group cộng đồng</h3><p>Giao lưu, mua bán, tìm bang hội cùng anh em.</p></a>
+      <a href="#" class="feat"><div class="ic"><svg class="i"><use href="#ic-chat-round"/></svg></div><h3>Zalo / Hotline</h3><p>Hỗ trợ nạp thẻ và sự cố tài khoản trực tiếp.</p></a>
+    </div>
+  </div>
+</section>
+
+<button class="totop" id="totop" aria-label="Về đầu trang" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="m6 12 6-6 6 6"/></svg>
+</button>
+
+<!-- ===== OVERLAY: TIN TỨC / HƯỚNG DẪN ===== -->
+<div class="overlay" id="ov-news">
+  <div class="ov-bar"><div class="ov-inner ovbar-row">
+    <span class="obrand">GOLDMU<span class="gold">VN</span> · Hướng Dẫn</span>
+    <button class="ov-close" onclick="closeOverlays()">Đóng</button>
+  </div></div>
+  <div class="ov-inner">
+    <div class="gd-head">
+      <h2>Hướng Dẫn &amp; Tin Tức</h2>
+      <p>Tổng hợp bài viết hướng dẫn, mẹo chơi và thông báo mới nhất từ máy chủ Phục Hưng.</p>
+    </div>
+    <div class="filters">
+      <span class="chip on">Tất cả</span><span class="chip">Người mới</span><span class="chip">Cài đặt</span>
+      <span class="chip">Tính năng</span><span class="chip">Sự kiện</span><span class="chip">Nạp thẻ</span>
+    </div>
+    <div class="news">
+      <div class="art c-new" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Người mới</span><span class="glyph">01</span></div><div class="art-body"><h4>Hướng dẫn tạo tài khoản &amp; đăng nhập GOLDMUVN</h4><p>Các bước đăng ký tài khoản và đăng nhập vào game chỉ trong 1 phút.</p><div class="art-meta"><span>18/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-setup" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Cài đặt</span><span class="glyph">02</span></div><div class="art-body"><h4>Tải &amp; cài đặt game: bản Full + Patch mới nhất</h4><p>Link tải bộ cài, cách giải nén, cập nhật patch và khởi động game.</p><div class="art-meta"><span>17/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-setup" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Cài đặt</span><span class="glyph">03</span></div><div class="art-body"><h4>Khắc phục các lỗi thường gặp khi khởi động game</h4><p>Lỗi mất file, DirectX, bị chặn bởi antivirus, màn hình đen… cách xử lý.</p><div class="art-meta"><span>16/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-feat" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Tính năng</span><span class="glyph">04</span></div><div class="art-body"><h4>Hệ thống Reset &amp; Master Reset chi tiết</h4><p>Điều kiện reset, điểm cộng và lộ trình lên Master Reset hiệu quả.</p><div class="art-meta"><span>15/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-feat" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Tính năng</span><span class="glyph">05</span></div><div class="art-body"><h4>Wing các cấp &amp; cách ép Wing tỉ lệ cao</h4><p>Nguyên liệu, công thức và mẹo tăng tỉ lệ ép Wing 2 / 2.5 / 3 / 4.</p><div class="art-meta"><span>14/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-event" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Sự kiện</span><span class="glyph">06</span></div><div class="art-body"><h4>Lịch Boss &amp; mẹo săn Boss hiệu quả</h4><p>Khung giờ Boss Vàng, Medusa, Kundun, Erohim và cách tổ chức team săn.</p><div class="art-meta"><span>13/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-feat" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Tính năng</span><span class="glyph">07</span></div><div class="art-body"><h4>Ép ngọc, cường hóa &amp; ép đồ Excellent</h4><p>Cách dùng ngọc Bless/Soul/Life/Creation và ép đồ Excellent an toàn.</p><div class="art-meta"><span>12/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-pay" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Nạp thẻ</span><span class="glyph">08</span></div><div class="art-body"><h4>Hướng dẫn nạp WCoin &amp; các gói ưu đãi</h4><p>Nạp qua thẻ cào, chuyển khoản, ví điện tử và mốc khuyến mãi nạp đầu.</p><div class="art-meta"><span>11/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-event" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Sự kiện</span><span class="glyph">09</span></div><div class="art-body"><h4>Castle Siege: luật chơi &amp; phần thưởng</h4><p>Cách đăng ký, điều kiện tham gia, luật chiếm lõi và quyền lợi bang vô địch.</p><div class="art-meta"><span>10/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+      <div class="art c-new" onclick="openArticle()"><div class="art-thumb"><span class="art-tag">Người mới</span><span class="glyph">10</span></div><div class="art-body"><h4>Lộ trình train nhanh cho tân thủ 7 ngày đầu</h4><p>Bản đồ cày theo cấp, ưu tiên kỹ năng, build điểm và mốc reset hợp lý.</p><div class="art-meta"><span>09/06/2026</span><span class="art-more">Đọc tiếp →</span></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OVERLAY: BÀI VIẾT ===== -->
+<div class="overlay" id="ov-article">
+  <div class="ov-bar"><div class="ov-inner ovbar-row">
+    <button class="ov-back" onclick="openNews()">← Danh sách hướng dẫn</button>
+    <button class="ov-close" onclick="closeOverlays()">Đóng</button>
+  </div></div>
+  <div class="ov-inner">
+    <div class="read">
+      <span class="a-tag">Người mới</span>
+      <h1>Hướng dẫn tạo tài khoản &amp; đăng nhập GOLDMUVN</h1>
+      <div class="a-meta">
+        <span>Ngày đăng: <b>18/06/2026</b></span><span>Tác giả: <b>BQT GOLDMUVN</b></span>
+        <span><b>2.481</b> lượt xem</span><span>Đọc khoảng <b>4 phút</b></span>
+      </div>
+      <div class="a-hero"><div><div class="ph">ẢNH BÀI VIẾT</div>Thay bằng ảnh chụp giao diện đăng ký của bạn</div></div>
+      <div class="toc">
+        <h4>Mục lục</h4>
+        <ol>
+          <li><a href="#g1">Chuẩn bị trước khi đăng ký</a></li>
+          <li><a href="#g2">Các bước tạo tài khoản</a></li>
+          <li><a href="#g3">Đăng nhập vào game</a></li>
+          <li><a href="#g4">Một số lỗi thường gặp</a></li>
+          <li><a href="#g5">Câu hỏi thường gặp</a></li>
+        </ol>
+      </div>
+      <div class="rd">
+        <p>Chào mừng tân thủ đến với máy chủ <strong>Phục Hưng — GOLDMUVN</strong>! Trước khi bước vào thế giới MU cổ điển, bạn cần một tài khoản để đăng nhập và lưu trữ nhân vật. Bài viết hướng dẫn chi tiết cách tạo tài khoản và đăng nhập chỉ trong vài phút.</p>
+        <h2 id="g1"><span class="num">1.</span> Chuẩn bị trước khi đăng ký</h2>
+        <ul>
+          <li>Một <strong>email còn hoạt động</strong> để xác thực và khôi phục mật khẩu.</li>
+          <li>Số điện thoại (không bắt buộc) giúp bảo mật và lấy lại tài khoản nhanh hơn.</li>
+          <li>Trình duyệt mới (Chrome, Edge, Cốc Cốc…) để truy cập trang chủ ổn định.</li>
+        </ul>
+        <h2 id="g2"><span class="num">2.</span> Các bước tạo tài khoản</h2>
+        <ol class="steps">
+          <li>Truy cập trang chủ <b>GOLDMUVN</b> và nhấn nút <b>“Đăng ký”</b> ở góc trên bên phải.</li>
+          <li>Điền <b>tên đăng nhập</b> (6–16 ký tự, không dấu), <b>mật khẩu</b> và <b>email</b>.</li>
+          <li>Nhập <b>mã captcha</b> để xác minh bạn không phải robot.</li>
+          <li>Nhấn <b>“Tạo tài khoản”</b>, mở email và bấm liên kết xác thực.</li>
+          <li>Quay lại trang chủ, đăng nhập để kiểm tra tài khoản đã sẵn sàng.</li>
+        </ol>
+        <div class="callout note"><div class="bar"></div><div><h4>Mẹo đặt mật khẩu an toàn</h4><p>Dùng tối thiểu 8 ký tự, kết hợp chữ hoa, chữ thường và số. Không dùng chung mật khẩu với game/website khác.</p></div></div>
+        <h2 id="g3"><span class="num">3.</span> Đăng nhập vào game</h2>
+        <ol class="steps">
+          <li>Mở thư mục game, chạy <b>GOLDMUVN.exe</b> (hoặc <b>Launcher</b>) bằng quyền Administrator.</li>
+          <li>Chờ launcher cập nhật <b>patch mới nhất</b>, rồi nhấn <b>“Start”</b>.</li>
+          <li>Nhập <b>tài khoản</b> và <b>mật khẩu</b>, chọn máy chủ <b>Phục Hưng</b>.</li>
+          <li>Tạo nhân vật, chọn class yêu thích và bắt đầu hành trình!</li>
+        </ol>
+        <div class="callout warn"><div class="bar"></div><div><h4>Lưu ý bảo mật</h4><p>BQT <strong>không bao giờ</strong> hỏi mật khẩu của bạn qua chat hay Facebook. Không đăng nhập tài khoản trên web lạ để tránh bị hack.</p></div></div>
+        <h2 id="g4"><span class="num">4.</span> Một số lỗi thường gặp</h2>
+        <table class="tb"><thead><tr><th>Lỗi</th><th>Nguyên nhân &amp; cách xử lý</th></tr></thead><tbody>
+          <tr><td>Sai tài khoản / mật khẩu</td><td>Kiểm tra phím Caps Lock; nếu quên, dùng “Quên mật khẩu” qua email.</td></tr>
+          <tr><td>Không nhận email xác thực</td><td>Xem mục Spam/Quảng cáo; gửi lại email xác thực sau 2–3 phút.</td></tr>
+          <tr><td>Vào web được nhưng không vào game</td><td>Cập nhật patch, chạy game quyền Admin, tắt phần mềm diệt virus.</td></tr>
+          <tr><td>Tài khoản bị khóa</td><td>Liên hệ BQT qua Discord/Fanpage kèm tên tài khoản để được hỗ trợ.</td></tr>
+        </tbody></table>
+        <h2 id="g5"><span class="num">5.</span> Câu hỏi thường gặp</h2>
+        <details class="faq" open><summary>Một email đăng ký được bao nhiêu tài khoản?</summary><div class="ans">Mỗi email đăng ký tối đa 1 tài khoản chính để đảm bảo công bằng và chống cày thuê.</div></details>
+        <details class="faq"><summary>Quên mật khẩu thì làm sao?</summary><div class="ans">Vào trang chủ chọn “Quên mật khẩu”, nhập email đã đăng ký và làm theo hướng dẫn gửi về.</div></details>
+        <details class="faq"><summary>Có thể đổi tên đăng nhập không?</summary><div class="ans">Tên đăng nhập không thể đổi sau khi tạo. Hãy cân nhắc kỹ khi đăng ký.</div></details>
+        <p>Chúc bạn có những giờ phút chiến đấu thật vui tại <strong>GOLDMUVN — Máy Chủ Phục Hưng</strong>!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="social">
+      <a href="#" title="Facebook"><svg class="i"><use href="#ic-fb"/></svg></a>
+      <a href="#" title="Discord"><svg class="i"><use href="#ic-discord"/></svg></a>
+      <a href="#" title="YouTube"><svg class="i"><use href="#ic-yt"/></svg></a>
+      <a href="#" title="Zalo"><svg class="i"><use href="#ic-chat-round"/></svg></a>
+    </div>
+    <div class="brand" style="justify-content:center;margin-bottom:10px">GOLDMU<span class="gold">VN</span></div>
+    <p>© 2026 GOLDMUVN · Máy Chủ Phục Hưng. Game dành cho người chơi trên 18 tuổi.</p>
+    <p style="margin-top:6px;font-size:12.5px;opacity:.7">Chơi game lành mạnh — quản lý thời gian hợp lý.</p>
+  </div>
+</footer>
+
+<script>
+  /* ===== Countdown — sửa ngày khai mở ở dòng dưới ===== */
+  const LAUNCH = new Date("2026-07-15T19:00:00+07:00").getTime();
+  const pad = n => String(n).padStart(2,'0');
+  function tick(){
+    const now = Date.now();
+    let diff = Math.max(0, LAUNCH - now);
+    const d = Math.floor(diff/86400000); diff -= d*86400000;
+    const h = Math.floor(diff/3600000); diff -= h*3600000;
+    const m = Math.floor(diff/60000); diff -= m*60000;
+    const s = Math.floor(diff/1000);
+    document.getElementById('d').textContent = pad(d);
+    document.getElementById('h').textContent = pad(h);
+    document.getElementById('m').textContent = pad(m);
+    document.getElementById('s').textContent = pad(s);
+  }
+  tick(); setInterval(tick,1000);
+
+  /* ===== Embers ===== */
+  const ec = document.getElementById('embers');
+  for(let i=0;i<40;i++){
+    const e=document.createElement('div');
+    e.className='ember';
+    e.style.left=Math.random()*100+'%';
+    e.style.animationDuration=(6+Math.random()*9)+'s';
+    e.style.animationDelay=(-Math.random()*12)+'s';
+    const sz=2+Math.random()*4; e.style.width=e.style.height=sz+'px';
+    ec.appendChild(e);
+  }
+
+  /* ===== Reveal on scroll ===== */
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* ===== Guide overlays ===== */
+  function closeOverlays(){
+    document.querySelectorAll('.overlay').forEach(o=>o.classList.remove('open'));
+    document.body.classList.remove('locked');
+  }
+  function openNews(e){
+    if(e) e.preventDefault();
+    closeOverlays();
+    const o=document.getElementById('ov-news');
+    o.classList.add('open'); o.scrollTop=0;
+    document.body.classList.add('locked');
+  }
+  function openArticle(e){
+    if(e) e.preventDefault();
+    closeOverlays();
+    const o=document.getElementById('ov-article');
+    o.classList.add('open'); o.scrollTop=0;
+    document.body.classList.add('locked');
+  }
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeOverlays(); });
+  // back to top
+  const totop=document.getElementById('totop');
+  window.addEventListener('scroll',()=>{ totop.classList.toggle('show', window.scrollY>500); });
+  // chip filter (giao diện mẫu)
+  document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+    document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
+    c.classList.add('on');
+  }));
+</script>
+</body>
+</html>
