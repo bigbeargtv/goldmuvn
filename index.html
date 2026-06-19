@@ -320,6 +320,36 @@
     background:linear-gradient(135deg,var(--ember),var(--ember-2));box-shadow:0 8px 22px rgba(255,61,46,.4);transition:.25s}
   .totop:hover{transform:translateY(-3px)}
   .totop.show{display:grid}
+
+  /* auth buttons + modal */
+  .nav-auth{display:flex;align-items:center;gap:10px}
+  .btn-login{font-size:14px;font-weight:600;color:var(--text);cursor:pointer;padding:9px 15px;border-radius:8px;border:1px solid var(--line);transition:.2s;white-space:nowrap}
+  .btn-login:hover{border-color:var(--gold);color:var(--gold)}
+  .nav-cta{cursor:pointer}
+  .auth-mask{position:fixed;inset:0;z-index:300;display:none;align-items:flex-start;justify-content:center;
+    background:rgba(0,0,0,.72);backdrop-filter:blur(5px);overflow-y:auto;padding:64px 16px}
+  .auth-mask.open{display:flex}
+  .auth-card{width:100%;max-width:400px;background:linear-gradient(180deg,#15121f,#0c0a14);border:1px solid var(--line);
+    padding:26px;position:relative;
+    clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px)}
+  .auth-x{position:absolute;top:14px;right:16px;color:var(--muted);cursor:pointer;background:none;border:none;font-size:16px}
+  .auth-x:hover{color:var(--gold)}
+  .auth-logo{text-align:center;font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:22px}
+  .auth-sub{text-align:center;color:var(--muted);font-size:12.5px;margin:4px 0 20px}
+  .auth-tabs{display:flex;gap:6px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:4px;margin-bottom:18px}
+  .auth-tab{flex:1;text-align:center;padding:9px;border-radius:7px;font-weight:700;font-size:13px;color:var(--muted);cursor:pointer;transition:.2s}
+  .auth-tab.on{color:#1a1206;background:linear-gradient(135deg,#ffe18a,#caa14b)}
+  .auth-field{margin-bottom:13px}
+  .auth-field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+  .auth-field input{width:100%;padding:11px 13px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);font-family:var(--font);font-size:14px}
+  .auth-field input:focus{outline:none;border-color:var(--gold)}
+  .auth-submit{width:100%;padding:13px;border-radius:10px;border:none;font-weight:700;font-size:15px;color:#fff;cursor:pointer;
+    background:linear-gradient(135deg,var(--ember),var(--ember-2));box-shadow:0 8px 22px rgba(255,61,46,.35);margin-top:6px;transition:.2s}
+  .auth-submit:hover{transform:translateY(-2px)}
+  .auth-alt{text-align:center;font-size:13px;color:var(--muted);margin-top:14px}
+  .auth-alt a{color:var(--gold);cursor:pointer;font-weight:600}
+  .auth-note{font-size:11.5px;color:var(--muted);text-align:center;margin-top:14px;opacity:.85;line-height:1.5}
+  @media(max-width:560px){.btn-login{display:none}}
   .cls-bars i{width:26px;height:6px;border-radius:3px;background:rgba(255,255,255,.12)}
   .cls-bars i.on{background:linear-gradient(90deg,var(--ember),var(--gold))}
 
@@ -509,7 +539,10 @@
       <a href="#download">Tải Game</a>
       <a href="#support">Hỗ Trợ</a>
     </nav>
-    <a href="#download" class="nav-cta">CHƠI NGAY</a>
+    <div class="nav-auth">
+      <a class="btn-login" onclick="openAuth('login',event)">Đăng Nhập</a>
+      <a class="nav-cta" onclick="openAuth('register',event)">Đăng Ký</a>
+    </div>
     <button class="burger" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
   </div>
 </header>
@@ -1000,6 +1033,34 @@
   </div>
 </section>
 
+<!-- ===== AUTH MODAL ===== -->
+<div class="auth-mask" id="authMask" onclick="if(event.target===this)closeAuth()">
+  <div class="auth-card">
+    <button class="auth-x" onclick="closeAuth()" aria-label="Đóng">✕</button>
+    <div class="auth-logo">GOLDMU<span class="gold">VN</span></div>
+    <div class="auth-sub">Máy Chủ Phục Hưng · Season 6.21</div>
+    <div class="auth-tabs">
+      <div class="auth-tab" id="tab-login" onclick="switchAuth('login')">Đăng Nhập</div>
+      <div class="auth-tab" id="tab-register" onclick="switchAuth('register')">Đăng Ký</div>
+    </div>
+    <form id="form-login" onsubmit="return authDemo(event)">
+      <div class="auth-field"><label>Tài khoản</label><input type="text" placeholder="Nhập tên đăng nhập" autocomplete="username"></div>
+      <div class="auth-field"><label>Mật khẩu</label><input type="password" placeholder="Nhập mật khẩu" autocomplete="current-password"></div>
+      <button class="auth-submit" type="submit">Đăng Nhập</button>
+      <div class="auth-alt">Chưa có tài khoản? <a onclick="switchAuth('register')">Đăng ký ngay</a></div>
+    </form>
+    <form id="form-register" style="display:none" onsubmit="return authDemo(event)">
+      <div class="auth-field"><label>Tài khoản</label><input type="text" placeholder="6–16 ký tự, không dấu"></div>
+      <div class="auth-field"><label>Mật khẩu</label><input type="password" placeholder="Tối thiểu 8 ký tự"></div>
+      <div class="auth-field"><label>Nhập lại mật khẩu</label><input type="password" placeholder="Nhập lại mật khẩu"></div>
+      <div class="auth-field"><label>Email</label><input type="email" placeholder="Email để xác thực"></div>
+      <button class="auth-submit" type="submit">Tạo Tài Khoản</button>
+      <div class="auth-alt">Đã có tài khoản? <a onclick="switchAuth('login')">Đăng nhập</a></div>
+    </form>
+    <div class="auth-note">Đây là form demo giao diện — cần kết nối hệ thống tài khoản của server để hoạt động thật.</div>
+  </div>
+</div>
+
 <button class="totop" id="totop" aria-label="Về đầu trang" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="m6 12 6-6 6 6"/></svg>
 </button>
@@ -1170,10 +1231,37 @@
     o.classList.add('open'); o.scrollTop=0;
     document.body.classList.add('locked');
   }
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeOverlays(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeOverlays(); closeAuth(); } });
   // back to top
   const totop=document.getElementById('totop');
   window.addEventListener('scroll',()=>{ totop.classList.toggle('show', window.scrollY>500); });
+
+  /* ===== Auth modal ===== */
+  function openAuth(mode,e){ if(e) e.preventDefault(); switchAuth(mode||'login'); document.getElementById('authMask').classList.add('open'); document.body.classList.add('locked'); }
+  function closeAuth(){ const m=document.getElementById('authMask'); if(m) m.classList.remove('open'); document.body.classList.remove('locked'); }
+  function switchAuth(mode){
+    const l = mode!=='register';
+    document.getElementById('tab-login').classList.toggle('on',l);
+    document.getElementById('tab-register').classList.toggle('on',!l);
+    document.getElementById('form-login').style.display = l?'block':'none';
+    document.getElementById('form-register').style.display = l?'none':'block';
+  }
+  function authDemo(e){ e.preventDefault(); alert('Đây là form demo giao diện. Hãy kết nối hệ thống tài khoản thật của server để xử lý đăng nhập/đăng ký.'); return false; }
+
+  /* ===== Tự thay ảnh thật nếu có trong thư mục images/ (nếu thiếu thì giữ hình vẽ) ===== */
+  function trySwap(url, cb){ const im=new Image(); im.onload=()=>cb(im); im.src=url; }
+  // Logo
+  trySwap('images/logo.png', im=>{ const m=document.querySelector('.brand .mark'); if(!m) return;
+    m.innerHTML=''; m.style.background='none'; m.style.boxShadow='none';
+    im.style.width='100%'; im.style.height='100%'; im.style.objectFit='contain'; m.appendChild(im); });
+  // Nhân vật hero (ảnh to đầu trang)
+  trySwap('images/hero-char.png', im=>{ const a=document.querySelector('.hero-art .hero-char'); if(!a) return;
+    im.className='hero-char'; im.alt='Nhân vật GOLDMUVN'; a.replaceWith(im); });
+  // 7 nhân vật (char-1.png … char-7.png)
+  document.querySelectorAll('.clsrow .cls-art').forEach((art,i)=>{
+    trySwap('images/char-'+(i+1)+'.png', im=>{ art.innerHTML='';
+      im.style.height='100%'; im.style.maxWidth='100%'; im.style.objectFit='contain'; art.appendChild(im); });
+  });
   // chip filter (giao diện mẫu)
   document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
