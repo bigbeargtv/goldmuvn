@@ -132,17 +132,18 @@
   }
   .hero-old{position:relative;text-align:center}
   /* hero banner mode (ảnh ngang làm nền) */
-  .hero-banner{position:absolute;inset:0;z-index:0;background-position:right center;background-size:cover;
-    background-repeat:no-repeat;opacity:0;transition:opacity .7s;pointer-events:none}
+  .hero-banner{position:absolute;top:8%;bottom:6%;right:2%;left:58%;z-index:0;
+    background-position:center right;background-size:contain;background-repeat:no-repeat;
+    opacity:0;transition:opacity .7s;pointer-events:none}
   .hero-banner::after{content:"";position:absolute;inset:0;
-    background:linear-gradient(90deg,#06060a 0%,rgba(6,6,10,.92) 26%,rgba(6,6,10,.45) 60%,rgba(6,6,10,.30) 100%),
-      linear-gradient(0deg,#06060a 2%,transparent 30%)}
+    background:linear-gradient(90deg,#06060a 0%,rgba(6,6,10,.55) 10%,transparent 38%)}
   .hero.banner-mode .hero-banner{opacity:1}
   .hero.banner-mode .hero-grid{grid-template-columns:1fr;position:relative;z-index:1}
   .hero.banner-mode .hero-copy{max-width:620px}
   .hero.banner-mode .hero-art{display:none}
   @media(max-width:880px){
-    .hero-banner::after{background:linear-gradient(180deg,rgba(6,6,10,.7),rgba(6,6,10,.92)),linear-gradient(0deg,#06060a 2%,transparent 40%)}
+    .hero-banner{left:0;background-size:cover;background-position:center;opacity:.28!important}
+    .hero-banner::after{background:linear-gradient(180deg,rgba(6,6,10,.72),rgba(6,6,10,.9)),linear-gradient(0deg,#06060a 2%,transparent 45%)}
   }
   .badge{display:inline-flex;align-items:center;gap:9px;padding:8px 18px;border-radius:999px;
     border:1px solid var(--line);background:rgba(244,201,93,.06);
