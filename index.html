@@ -16,13 +16,13 @@
 <meta property="og:title" content="GOLDMUVN — MU Online Season 6.21 | Máy Chủ Phục Hưng">
 <meta property="og:description" content="Máy chủ Phục Hưng khai mở! Cày cuốc công bằng, không pay-to-win, antihack đỉnh cao, sự kiện liên tục. Tải game & vào chiến ngay.">
 <meta property="og:url" content="https://bigbeargtv.github.io/goldmuvn/">
-<meta property="og:image" content="https://bigbeargtv.github.io/goldmuvn/images/og-cover.jpg">
+<meta property="og:image" content="https://bigbeargtv.github.io/goldmuvn/og-cover.jpg">
 <meta property="og:locale" content="vi_VN">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GOLDMUVN — MU Online Season 6.21 | Máy Chủ Phục Hưng">
 <meta name="twitter:description" content="Máy chủ Phục Hưng khai mở! Cày cuốc công bằng, không pay-to-win, sự kiện liên tục.">
-<meta name="twitter:image" content="https://bigbeargtv.github.io/goldmuvn/images/og-cover.jpg">
+<meta name="twitter:image" content="https://bigbeargtv.github.io/goldmuvn/og-cover.jpg">
 <!-- Favicon (sigil) -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='5' fill='%23f4c95d'/><path d='M12 3 13.2 6 12 8.5 10.8 6z M12 8.5V16 M9 16h6' stroke='%231a1206' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,10 +65,10 @@
     position:relative}
 
   /* ===== Animated background ===== */
-  /* Ảnh nền: thả 1 file ảnh fantasy vào thư mục "images/" và đặt tên "background.jpg".
+  /* Ảnh nền: thả 1 file ảnh fantasy vào thư mục "" và đặt tên "background.jpg".
      Nếu chưa có ảnh, nền gradient tối vẫn hiển thị bình thường. */
   .bg-photo{position:fixed;inset:0;z-index:-3;
-    background:url('images/background.jpg') center/cover no-repeat fixed;
+    background:url('background.jpg') center/cover no-repeat fixed;
     filter:saturate(.95) contrast(1.05)}
   .bg-fx{position:fixed;inset:0;z-index:-2;
     background:
@@ -131,6 +131,19 @@
     .hero-ring{width:320px;height:320px}.hero-ring.r2{width:240px;height:240px}
   }
   .hero-old{position:relative;text-align:center}
+  /* hero banner mode (ảnh ngang làm nền) */
+  .hero-banner{position:absolute;inset:0;z-index:0;background-position:right center;background-size:cover;
+    background-repeat:no-repeat;opacity:0;transition:opacity .7s;pointer-events:none}
+  .hero-banner::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,#06060a 0%,rgba(6,6,10,.92) 26%,rgba(6,6,10,.45) 60%,rgba(6,6,10,.30) 100%),
+      linear-gradient(0deg,#06060a 2%,transparent 30%)}
+  .hero.banner-mode .hero-banner{opacity:1}
+  .hero.banner-mode .hero-grid{grid-template-columns:1fr;position:relative;z-index:1}
+  .hero.banner-mode .hero-copy{max-width:620px}
+  .hero.banner-mode .hero-art{display:none}
+  @media(max-width:880px){
+    .hero-banner::after{background:linear-gradient(180deg,rgba(6,6,10,.7),rgba(6,6,10,.92)),linear-gradient(0deg,#06060a 2%,transparent 40%)}
+  }
   .badge{display:inline-flex;align-items:center;gap:9px;padding:8px 18px;border-radius:999px;
     border:1px solid var(--line);background:rgba(244,201,93,.06);
     font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:26px}
@@ -549,6 +562,7 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-banner" id="heroBanner"></div>
   <div class="wrap">
    <div class="hero-grid">
     <div class="hero-copy">
@@ -1248,18 +1262,22 @@
   }
   function authDemo(e){ e.preventDefault(); alert('Đây là form demo giao diện. Hãy kết nối hệ thống tài khoản thật của server để xử lý đăng nhập/đăng ký.'); return false; }
 
-  /* ===== Tự thay ảnh thật nếu có trong thư mục images/ (nếu thiếu thì giữ hình vẽ) ===== */
+  /* ===== Tự thay ảnh thật nếu có trong thư mục  (nếu thiếu thì giữ hình vẽ) ===== */
   function trySwap(url, cb){ const im=new Image(); im.onload=()=>cb(im); im.src=url; }
   // Logo
-  trySwap('images/logo.png', im=>{ const m=document.querySelector('.brand .mark'); if(!m) return;
+  trySwap('logo.png', im=>{ const m=document.querySelector('.brand .mark'); if(!m) return;
     m.innerHTML=''; m.style.background='none'; m.style.boxShadow='none';
     im.style.width='100%'; im.style.height='100%'; im.style.objectFit='contain'; m.appendChild(im); });
-  // Nhân vật hero (ảnh to đầu trang)
-  trySwap('images/hero-char.png', im=>{ const a=document.querySelector('.hero-art .hero-char'); if(!a) return;
+  // Nhân vật hero (ảnh dọc to đầu trang) — dùng khi KHÔNG dùng banner ngang
+  trySwap('hero-char.png', im=>{ const a=document.querySelector('.hero-art .hero-char'); if(!a) return;
     im.className='hero-char'; im.alt='Nhân vật GOLDMUVN'; a.replaceWith(im); });
+  // Banner ngang làm nền hero (ảnh 2 nhân vật) — ưu tiên nếu có
+  trySwap('hero-banner.jpg', im=>{ const hb=document.getElementById('heroBanner'); if(!hb) return;
+    hb.style.backgroundImage="url('hero-banner.jpg')";
+    document.querySelector('.hero').classList.add('banner-mode'); });
   // 7 nhân vật (char-1.png … char-7.png)
   document.querySelectorAll('.clsrow .cls-art').forEach((art,i)=>{
-    trySwap('images/char-'+(i+1)+'.png', im=>{ art.innerHTML='';
+    trySwap('char-'+(i+1)+'.png', im=>{ art.innerHTML='';
       im.style.height='100%'; im.style.maxWidth='100%'; im.style.objectFit='contain'; art.appendChild(im); });
   });
   // chip filter (giao diện mẫu)
