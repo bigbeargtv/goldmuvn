@@ -150,7 +150,14 @@
     background-size:contain;background-position:center bottom}
   .hero.png-banner .hero-banner::after{
     background:linear-gradient(0deg,rgba(6,6,10,.5) 0%,transparent 12%)}
-  @media(max-width:880px){.hero.png-banner .hero-banner{left:0;background-size:contain;background-position:center;opacity:.9!important}}
+  @media(max-width:880px){
+    .hero.png-banner .hero-banner{left:0;background-size:contain;background-position:center bottom;opacity:.4!important}
+    /* lớp nền tối sau chữ giới thiệu trên mobile cho dễ đọc */
+    .hero.banner-mode .hero-copy{position:relative;z-index:1;
+      background:linear-gradient(180deg,rgba(6,6,10,.82),rgba(6,6,10,.62));
+      -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+      padding:20px 18px;border-radius:16px;border:1px solid var(--line)}
+  }
   @media(max-width:880px){
     .hero-banner{left:0;background-size:cover;background-position:center;opacity:.28!important}
     .hero-banner::after{background:linear-gradient(180deg,rgba(6,6,10,.72),rgba(6,6,10,.9)),linear-gradient(0deg,#06060a 2%,transparent 45%)}
