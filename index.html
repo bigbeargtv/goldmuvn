@@ -488,8 +488,14 @@
   .reveal.in{opacity:1;transform:none}
 
   @media(max-width:880px){
-    .nav-links{display:none}
     .burger{display:block}
+    /* menu dạng dropdown trên mobile */
+    .nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;
+      background:#0b0d16;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      padding:6px 0;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:13px 24px;font-size:15px;border-bottom:1px solid rgba(255,255,255,.04)}
+    .nav-links a:last-child{border-bottom:none}
     .stats,.features,.events,.classes,.gallery{grid-template-columns:1fr 1fr}
     .cd-grid{gap:10px}
   }
@@ -570,7 +576,7 @@
       <a class="btn-login" onclick="openAuth('login',event)">Đăng Nhập</a>
       <a class="nav-cta" onclick="openAuth('register',event)">Đăng Ký</a>
     </div>
-    <button class="burger" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
+    <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
   </div>
 </header>
 
@@ -581,7 +587,7 @@
    <div class="hero-grid">
     <div class="hero-copy">
       <div class="badge"><span class="dot"></span> Season 6.21 · Máy Chủ Phục Hưng</div>
-      <h1 class="glow-text"><span class="l1">TÔN TRỌNG</span><br><span class="l2">CỔ ĐIỂN</span></h1>
+      <h1 class="glow-text"><span class="l1">TINH HOA</span><br><span class="l2">CỔ ĐIỂN</span></h1>
       <p class="sub">Máy chủ <b class="gold">Phục Hưng</b> của <b class="gold">GOLDMUVN</b> chính thức khai mở — gameplay Season 6.21, giữ trọn chất MU cổ điển, cày cuốc công bằng, không pay-to-win. Sẵn sàng tranh ngôi vương chưa, chiến binh?</p>
 
       <div class="tags">
@@ -1263,6 +1269,8 @@
   // back to top
   const totop=document.getElementById('totop');
   window.addEventListener('scroll',()=>{ totop.classList.toggle('show', window.scrollY>500); });
+  // chạm mục menu mobile -> đóng dropdown
+  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
 
   /* ===== Auth modal ===== */
   function openAuth(mode,e){ if(e) e.preventDefault(); switchAuth(mode||'login'); document.getElementById('authMask').classList.add('open'); document.body.classList.add('locked'); }
