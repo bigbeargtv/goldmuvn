@@ -1309,6 +1309,11 @@
     trySwap('char-'+(i+1)+'.png', im=>{ art.innerHTML='';
       im.style.width='100%'; im.style.height='100%'; im.style.objectFit='cover'; im.style.objectPosition='center top'; art.appendChild(im); });
   });
+  // Hình ảnh server (gallery): up shot-1 / shot-2 / shot-3 (.jpg hoặc .png)
+  document.querySelectorAll('.gallery .shot').forEach((shot,i)=>{
+    ['jpg','png'].forEach(ext=> trySwap('shot-'+(i+1)+'.'+ext, im=>{
+      shot.innerHTML=''; im.style.width='100%'; im.style.height='100%'; im.style.objectFit='cover'; shot.appendChild(im); }) );
+  });
   // chip filter (giao diện mẫu)
   document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
