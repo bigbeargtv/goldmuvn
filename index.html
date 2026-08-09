@@ -169,7 +169,29 @@
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
   .hero h1{font-size:clamp(40px,7.5vw,84px);font-weight:800;line-height:1.32;margin-bottom:8px;padding-top:.12em}
   .hero h1 .l2{display:inline-block;padding-top:.06em;line-height:1.3}
-  .hero h1 .l2{background:linear-gradient(180deg,#fff,var(--gold) 60%,var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero h1 .l2{background:linear-gradient(100deg,var(--gold-2) 0%,#fff5d8 22%,var(--gold) 45%,#ffffff 55%,var(--gold) 68%,var(--gold-2) 100%);
+    background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shine 4.5s linear infinite}
+  @keyframes shine{to{background-position:-220% center}}
+  /* hero entrance */
+  .hero-copy .status-row,.hero-copy h1,.hero-copy .sub,.hero-copy .tags,.hero-copy .hero-cta{opacity:0;animation:heroIn .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero-copy .status-row{animation-delay:.05s}
+  .hero-copy h1{animation-delay:.16s}
+  .hero-copy .sub{animation-delay:.32s}
+  .hero-copy .tags{animation-delay:.46s}
+  .hero-copy .hero-cta{animation-delay:.58s}
+  @keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  /* CTA shine sweep */
+  .btn-primary{position:relative;overflow:hidden}
+  .btn-primary::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;transform:skewX(-20deg);pointer-events:none;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);animation:sweep 3.8s ease-in-out infinite}
+  @keyframes sweep{0%,100%{left:-70%}55%{left:150%}}
+  /* status pill */
+  .status-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:26px}
+  .status-row .badge{margin-bottom:0}
+  .online-pill{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;
+    border:1px solid rgba(80,220,140,.35);background:rgba(40,180,110,.12);font-size:12px;font-weight:700;color:#7be0a0;letter-spacing:.5px}
+  .online-pill .odot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:pulse 1.6s infinite}
   .hero .sub{max-width:560px;margin:18px 0 0;color:var(--muted);font-size:clamp(15px,2.2vw,19px)}
   .tags{display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap;margin:30px 0 36px}
   .tag{padding:9px 18px;border-radius:10px;border:1px solid var(--line);
@@ -438,8 +460,7 @@
   .tl-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:50px 0 16px;flex-wrap:wrap}
   .tl-head h3{font-size:clamp(19px,3.4vw,26px)}
   .tl-head span{color:var(--muted);font-size:13px}
-  .tl-box{border:1px solid var(--line);background:var(--card);padding:14px 18px;
-    clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+  .tl-box{border:1px solid var(--line);background:var(--card);padding:16px 20px;border-radius:12px}
   .tl{column-count:2;column-gap:36px}
   .tl-row{break-inside:avoid;display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.06)}
   .tl-time{font-variant-numeric:tabular-nums;color:var(--gold);font-weight:700;font-size:13px;min-width:46px}
@@ -524,6 +545,21 @@
   .event,.race-card,.reset-card{
     background-image:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(244,201,93,var(--glow,0)),transparent 55%);
     transition:.3s,background 0s}
+
+  /* ===== Khung viền góc vàng (kiểu MU) ===== */
+  .statbar,.reset-card,.tl-box{position:relative}
+  .statbar::after,.reset-card::after,.tl-box::after{content:"";position:absolute;inset:6px;pointer-events:none;z-index:3}
+  .statbar::after,.reset-card::after,.tl-box::after{
+    background:
+      linear-gradient(var(--gold),var(--gold)) left top/18px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) left top/2px 18px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right top/18px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right top/2px 18px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) left bottom/18px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) left bottom/2px 18px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right bottom/18px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right bottom/2px 18px no-repeat;
+    opacity:.75}
 
   /* CTA final */
   .final{text-align:center;padding:56px 24px;margin:30px auto;max-width:980px;
@@ -640,7 +676,10 @@
   <div class="wrap">
    <div class="hero-grid">
     <div class="hero-copy">
-      <div class="badge"><span class="dot"></span> Season 6.21 · Máy Chủ Phục Hưng</div>
+      <div class="status-row">
+        <div class="badge"><span class="dot"></span> Season 6.21 · Máy Chủ Phục Hưng</div>
+        <div class="online-pill"><span class="odot"></span> MÁY CHỦ ONLINE</div>
+      </div>
       <h1 class="glow-text"><span class="l1">TINH HOA</span><br><span class="l2">CỔ ĐIỂN</span></h1>
       <p class="sub">Máy chủ <b class="gold">Phục Hưng</b> của <b class="gold">GOLDMUVN</b> chính thức khai mở — gameplay Season 6.21, giữ trọn chất MU cổ điển, cày cuốc công bằng, không pay-to-win. Sẵn sàng tranh ngôi vương chưa, chiến binh?</p>
 
