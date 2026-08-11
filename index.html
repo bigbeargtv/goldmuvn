@@ -132,6 +132,7 @@
     .hero-grid{grid-template-columns:1fr;text-align:center}
     .hero-copy{text-align:center;padding-left:0}
     .hero-copy::before{display:none}
+    .hero h1 .l1,.hero h1 .l2{margin-left:auto;margin-right:auto}
     .hero-art{min-height:360px;order:-1}
     .hero-char{max-width:320px}
     .hero-ring{width:320px;height:320px}.hero-ring.r2{width:240px;height:240px}
@@ -168,17 +169,27 @@
     .hero-banner{left:0;background-size:cover;background-position:center;opacity:.28!important}
     .hero-banner::after{background:linear-gradient(180deg,rgba(6,6,10,.72),rgba(6,6,10,.9)),linear-gradient(0deg,#06060a 2%,transparent 45%)}
   }
-  .badge{display:inline-flex;align-items:center;gap:9px;padding:8px 18px;border-radius:999px;
-    border:1px solid var(--line);background:rgba(244,201,93,.06);
-    font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:26px}
-  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px var(--ember);animation:pulse 1.6s infinite}
+  .badge{display:inline-flex;align-items:center;gap:10px;padding:11px 24px;border-radius:999px;
+    border:1px solid rgba(244,201,93,.3);background:linear-gradient(180deg,rgba(244,201,93,.14),rgba(244,201,93,.05));
+    font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:0}
+  .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px var(--ember);animation:pulse 1.6s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-  .hero h1{font-size:clamp(40px,7.5vw,84px);font-weight:800;line-height:1.32;margin-bottom:8px;padding-top:.12em}
-  .hero h1 .l2{display:inline-block;padding-top:.06em;line-height:1.3}
-  .hero h1 .l2{background:linear-gradient(100deg,var(--gold-2) 0%,#fff5d8 22%,var(--gold) 45%,#ffffff 55%,var(--gold) 68%,var(--gold-2) 100%);
-    background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
-    animation:shine 4.5s linear infinite}
-  @keyframes shine{to{background-position:-220% center}}
+  /* Tiêu đề ánh kim cách điệu */
+  .hero h1{font-size:clamp(38px,8vw,94px);font-weight:800;line-height:1.16;margin-bottom:8px;padding-top:.18em;letter-spacing:.5px}
+  .hero h1 .l1,.hero h1 .l2{display:block;width:fit-content;white-space:nowrap;line-height:1.16;padding-top:.04em;color:transparent;
+    -webkit-background-clip:text;background-clip:text}
+  .hero h1 .l1{
+    background-image:linear-gradient(180deg,#ffffff 0%,#e9edf6 42%,#a9b1c6 100%);
+    -webkit-background-clip:text;background-clip:text;
+    filter:drop-shadow(0 2px 2px rgba(0,0,0,.5)) drop-shadow(0 0 10px rgba(255,255,255,.15))}
+  .hero h1 .l2{
+    background-image:linear-gradient(180deg,#fff7d1 0%,#ffda6c 36%,#eaad3a 58%,#b97d1f 80%,#ffe9a6 100%),
+      linear-gradient(100deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%);
+    background-size:100% 100%,240% 100%;background-position:0 0,0 0;background-repeat:no-repeat;
+    -webkit-background-clip:text;background-clip:text;
+    filter:drop-shadow(0 2px 1px rgba(0,0,0,.55)) drop-shadow(0 0 24px rgba(244,201,93,.5));
+    animation:shine 5s linear infinite}
+  @keyframes shine{to{background-position:0 0,-240% 0}}
   /* hero entrance */
   .hero-copy .status-row,.hero-copy h1,.hero-copy .sub,.hero-copy .tags,.hero-copy .hero-cta{opacity:0;animation:heroIn .7s cubic-bezier(.2,.7,.2,1) forwards}
   .hero-copy .status-row{animation-delay:.05s}
@@ -683,10 +694,9 @@
    <div class="hero-grid">
     <div class="hero-copy">
       <div class="status-row">
-        <div class="badge"><span class="dot"></span> Season 6.21 · Máy Chủ Phục Hưng</div>
-        <div class="online-pill"><span class="odot"></span> MÁY CHỦ ONLINE</div>
+        <div class="badge"><span class="dot"></span> Season 6.21</div>
       </div>
-      <h1 class="glow-text"><span class="l1">TINH HOA</span><br><span class="l2">CỔ ĐIỂN</span></h1>
+      <h1 class="glow-text"><span class="l1">MÁY CHỦ</span><span class="l2">PHỤC HƯNG</span></h1>
       <p class="sub">Máy chủ <b class="gold">Phục Hưng</b> của <b class="gold">GOLDMUVN</b> chính thức khai mở — gameplay Season 6.21, giữ trọn chất MU cổ điển, cày cuốc công bằng, không pay-to-win. Sẵn sàng tranh ngôi vương chưa, chiến binh?</p>
 
       <div class="tags">
